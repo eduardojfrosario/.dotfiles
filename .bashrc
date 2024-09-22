@@ -68,6 +68,8 @@ eval "$(zoxide init bash)"
 
 eval "$(starship init bash)"
 
+eval "$(ssh-agent -s)"
+
 ##-----------------------------------------------------
 ## alias
 if [ -f /home/losg/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
