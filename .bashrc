@@ -44,6 +44,7 @@ alias wisdom='fortune | cowsay -f turtle'
 alias figlet="figlet -f slant"
 alias f="fzf"
 alias rescan="nmcli device wifi rescan"
+alias githelp="bat ~/.githelper.md"
 # tldr => simple man
 PS1='\w \$ '
 # xdg-open to view html pages
