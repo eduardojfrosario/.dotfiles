@@ -175,15 +175,15 @@ colors = {
     # "cyan": "#8ec07c",  # its actually aqua
     # "orange": "#fe8019",
     # Tokyo Night
-    # "bg": "#1a1b26",     # Background
-    # "fg": "#a9b1d6",     # Foreground (Text)
-    # "red": "#f7768e",    # Red (Error)
-    # "green": "#9ece6a",  # Green (Success)
-    # "yellow": "#e0af68", # Yellow (Warning)
-    # "blue": "#7aa2f7",   # Blue (Info)
-    # "purple": "#ad8ee6", # Purple (Accent)
-    # "cyan": "#449dab",   # Cyan (Secondary Info)
-    # "orange": "#ff9e64"  # Orange (Accent)
+    "bg": "#1a1b26",     # Background
+    "fg": "#a9b1d6",     # Foreground (Text)
+    "red": "#f7768e",    # Red (Error)
+    "green": "#9ece6a",  # Green (Success)
+    "yellow": "#e0af68", # Yellow (Warning)
+    "blue": "#7aa2f7",   # Blue (Info)
+    "purple": "#ad8ee6", # Purple (Accent)
+    "cyan": "#449dab",   # Cyan (Secondary Info)
+    "orange": "#ff9e64"  # Orange (Accent)
     # Kanagawa
     # "bg": "#1f1f28",       #  Sumire Black (Background)
     # "fg": "#dcd7ba",       #  Fuji White (Foreground)
@@ -195,15 +195,15 @@ colors = {
     # "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
     # "orange": "#e98a35"    #  Koi Carp Orange (Orange)
     # Catppuccin
-    "bg": "#1e1e2e",
-    "fg": "#cdd6f4",
-    "red": "#f38ba8",
-    "green": "#a6e3a1",
-    "yellow": "#f9e2af",
-    "blue": "#89dceb",
-    "purple": "#cba6f7",
-    "cyan": "#94e2d5",
-    "orange": "#fab387",
+    # "bg": "#1e1e2e",
+    # "fg": "#cdd6f4",
+    # "red": "#f38ba8",
+    # "green": "#a6e3a1",
+    # "yellow": "#f9e2af",
+    # "blue": "#89dceb",
+    # "purple": "#cba6f7",
+    # "cyan": "#94e2d5",
+    # "orange": "#fab387",
 }
 
 layout_theme = {
