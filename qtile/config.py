@@ -97,9 +97,9 @@ keys = [
     ),
     # Brightness
     # Increase backlight
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +10%")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%")),
     # Decrease backlight
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -175,15 +175,15 @@ colors = {
     # "cyan": "#8ec07c",  # its actually aqua
     # "orange": "#fe8019",
     # Tokyo Night
-    "bg": "#1a1b26",     # Background
-    "fg": "#a9b1d6",     # Foreground (Text)
-    "red": "#f7768e",    # Red (Error)
+    "bg": "#1a1b26",  # Background
+    "fg": "#a9b1d6",  # Foreground (Text)
+    "red": "#f7768e",  # Red (Error)
     "green": "#9ece6a",  # Green (Success)
-    "yellow": "#e0af68", # Yellow (Warning)
-    "blue": "#7aa2f7",   # Blue (Info)
-    "purple": "#ad8ee6", # Purple (Accent)
-    "cyan": "#449dab",   # Cyan (Secondary Info)
-    "orange": "#ff9e64"  # Orange (Accent)
+    "yellow": "#e0af68",  # Yellow (Warning)
+    "blue": "#7aa2f7",  # Blue (Info)
+    "purple": "#ad8ee6",  # Purple (Accent)
+    "cyan": "#449dab",  # Cyan (Secondary Info)
+    "orange": "#ff9e64",  # Orange (Accent)
     # Kanagawa
     # "bg": "#1f1f28",       #  Sumire Black (Background)
     # "fg": "#dcd7ba",       #  Fuji White (Foreground)
@@ -276,6 +276,15 @@ screens = [
                     foreground=colors["green"],
                     background=colors["bg"],
                 ),
+                widget.Backlight(
+                    backlight_name="nvidia_wmi_ec_backlight",  # Replace with your actual device name
+                    brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
+                    max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
+                    change_command="brightnessctl s {0}%",  # Command to change brightness
+                    format='brightness: {percent:2.0%}',
+                    foreground=colors["cyan"],
+                    background=colors["bg"],
+                ),
                 widget.CPU(
                     format="CPU: {load_percent}%",
                     foreground=colors["red"],
@@ -289,12 +298,12 @@ screens = [
                 ),
                 widget.Wlan(
                     format="{essid} {percent:2.0%}",
-                    foreground=colors["cyan"],
+                    foreground=colors["blue"],
                     background=colors["bg"],
                 ),
                 widget.Net(
                     format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}",
-                    foreground=colors["cyan"],
+                    foreground=colors["blue"],
                     background=colors["bg"],
                 ),
                 widget.Systray(

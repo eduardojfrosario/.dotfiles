@@ -56,9 +56,15 @@ fzf_cd() {
   dir=$(find ~/ -type d | fzf) && cd "$dir"
 }
 
+fzf_/() {
+  local dir
+  dir=$(find / -type d | fzf) && cd "$dir"
+}
+
 # Key binding for Ctrl-F
 bind -x '"\C-f": fzf_cd'
 
+bind -x '"\C-_": fzf_/'
 
 when
 
