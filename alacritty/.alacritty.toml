@@ -1,7 +1,9 @@
-import = [ "/usr/lib/node_modules/alacritty-themes/themes/Kitty.toml" ]
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Tokyonight_Night.toml"
+]
 
 [window]
-opacity = 0.9
+opacity = 1
 decorations = "Full"
 decorations_theme_variant = "Dark"
 
