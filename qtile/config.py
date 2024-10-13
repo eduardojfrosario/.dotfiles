@@ -175,15 +175,15 @@ colors = {
     # "cyan": "#8ec07c",  # its actually aqua
     # "orange": "#fe8019",
     # Tokyo Night
-    "bg": "#1a1b26",  # Background
-    "fg": "#a9b1d6",  # Foreground (Text)
-    "red": "#f7768e",  # Red (Error)
-    "green": "#9ece6a",  # Green (Success)
-    "yellow": "#e0af68",  # Yellow (Warning)
-    "blue": "#7aa2f7",  # Blue (Info)
-    "purple": "#ad8ee6",  # Purple (Accent)
-    "cyan": "#449dab",  # Cyan (Secondary Info)
-    "orange": "#ff9e64",  # Orange (Accent)
+    # "bg": "#1a1b26",  # Background
+    # "fg": "#a9b1d6",  # Foreground (Text)
+    # "red": "#f7768e",  # Red (Error)
+    # "green": "#9ece6a",  # Green (Success)
+    # "yellow": "#e0af68",  # Yellow (Warning)
+    # "blue": "#7aa2f7",  # Blue (Info)
+    # "purple": "#ad8ee6",  # Purple (Accent)
+    # "cyan": "#449dab",  # Cyan (Secondary Info)
+    # "orange": "#ff9e64",  # Orange (Accent)
     # Kanagawa
     # "bg": "#1f1f28",       #  Sumire Black (Background)
     # "fg": "#dcd7ba",       #  Fuji White (Foreground)
@@ -204,6 +204,17 @@ colors = {
     # "purple": "#cba6f7",
     # "cyan": "#94e2d5",
     # "orange": "#fab387",
+    # OneDark (Warmer)
+    "bg": "#232326",
+    "fg": "#a7aab0",
+    "red": "#de5d68",
+    "green": "#8fb573",
+    "yellow": "#dbb671",
+    "blue": "#57a5e5",
+    "purple": "#bb70d2",
+    "cyan": "#51a8b3",
+    "orange": "#c49060",
+   
 }
 
 layout_theme = {
@@ -281,7 +292,7 @@ screens = [
                     brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
                     max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
                     change_command="brightnessctl s {0}%",  # Command to change brightness
-                    format='brightness: {percent:2.0%}',
+                    format="brightness: {percent:2.0%}",
                     foreground=colors["cyan"],
                     background=colors["bg"],
                 ),
@@ -436,6 +447,7 @@ floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
+        Match(wm_class="Lxqt-policykit-agent"),
         Match(wm_class="confirmreset"),  # gitk
         Match(wm_class="makebranch"),  # gitk
         Match(wm_class="maketag"),  # gitk

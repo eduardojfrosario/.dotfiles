@@ -1,6 +1,3 @@
-import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/Tokyonight_Night.toml"
-]
 
 [window]
 opacity = 1
@@ -16,3 +13,19 @@ size = 14
 
   [font.normal]
   family = "Hack Nerd Font Mono"
+
+[colors]
+
+    [colors.primary]
+    background = "#232326"
+    foreground = "#a7aab0"
+
+    [colors.normal]
+    black = "#101012"
+    red = "#de5d68"
+    green = "#8fb573"
+    yellow = "#dbb671"
+    blue = "#57a5e5"
+    magenta = "#bb70d2"
+    cyan = "#51a8b3"
+    white = "#a7aab0"
