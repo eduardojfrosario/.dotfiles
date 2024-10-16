@@ -77,6 +77,7 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "c", lazy.spawn("speedcrunch")),
     Key([mod], "a", lazy.spawn("ani-cli --rofi -v -q 1080")),
+    Key(["mod1", "control"], "a", lazy.spawn("matlab/bin/matlab")),
     Key(
         [],
         "Print",
@@ -309,6 +310,7 @@ screens = [
                 ),
                 widget.Wlan(
                     format="{essid} {percent:2.0%}",
+                    interface="wlp0s20f3",
                     foreground=colors["blue"],
                     background=colors["bg"],
                 ),
