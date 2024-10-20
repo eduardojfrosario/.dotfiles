@@ -15,3 +15,4 @@ configuration {
     }
 }
 
+@theme "/home/losg/.local/share/rofi/themes/rounded-purple-dark.rasi"
