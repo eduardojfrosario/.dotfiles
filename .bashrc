@@ -46,6 +46,7 @@ alias f="fzf"
 alias rescan="nmcli device wifi rescan"
 alias githelp="bat ~/.githelper.md"
 alias matlab="~/matlab/bin/matlab"
+alias githelp="bat ~/.githelp.md"
 # tldr => simple man
 PS1='\w \$ '
 # xdg-open to view html pages
