@@ -311,7 +311,6 @@ screens = [
                 ),
                 widget.Wlan(
                     format="{essid} {percent:2.0%}",
-                    interface="wlp0s20f3",
                     foreground=colors["blue"],
                     background=colors["bg"],
                 ),
