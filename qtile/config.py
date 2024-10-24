@@ -220,7 +220,7 @@ colors = {
 }
 
 layout_theme = {
-    "border_width": 1,
+    "border_width": 3,
     "margin": 0,
     "border_focus": colors["fg"],
     "border_normal": colors["bg"],
