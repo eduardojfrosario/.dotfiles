@@ -21,4 +21,4 @@ xset s 300 5
 xset dpms 600 900 1200
 
 # Start media check script in the background
-~/.config/qtile/media-check.sh
+~/.config/qtile/media-check.sh &
