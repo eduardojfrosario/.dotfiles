@@ -76,8 +76,7 @@ keys = [
     Key([mod, "shift"], "d", lazy.spawn(".config/rofi/open_file.sh")),
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "c", lazy.spawn("speedcrunch")),
-    # ani-cli not working
-    # Key([mod], "a", lazy.spawn("ani-cli --rofi -v -q 1080")),
+    Key([mod], "a", lazy.spawn("ani-cli --rofi -v -q 1080")),
     Key(["mod1", "control"], "a", lazy.spawn("matlab/bin/matlab")),
     Key(
         [],
