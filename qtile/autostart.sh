@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Start picom
 picom &
 
@@ -11,7 +11,7 @@ xset -b &
 /usr/lib/polkit-kde-authentication-agent-1 &
 # Run the random wallpaper script
 # python ~/.config/qtile/random_wallpaper.py &
-nitrogen --set-scaled ~/Pictures/blueMountain02.jpg &
+nitrogen --set-scaled ~/Pictures/blueMountain02.jpg
 
 # Start xss-lock with i3lock
 # xss-lock -- i3lock -c 000000 -e &
