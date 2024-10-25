@@ -14,7 +14,7 @@ xset -b &
 nitrogen --set-scaled ~/Pictures/blueMountain02.jpg &
 
 # Start xss-lock with i3lock
-xss-lock -- i3lock -c 000000 -e &
+# xss-lock -- i3lock -c 000000 -e &
 
 # Set initial screen saver and DPMS settings
 xset s 300 5
