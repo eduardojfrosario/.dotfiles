@@ -40,13 +40,15 @@ alias wp="python ~/.config/qtile/random_wallpaper.py"
 alias rofisearch="~/.config/rofi/open_file.sh"
 alias cd='z'
 alias m='nvim .'
-alias wisdom='fortune | cowsay -f turtle'
+alias wisdom='fortune | cowsay -f stegosaurus'
 alias figlet="figlet -f slant"
 alias f="fzf"
 alias rescan="nmcli device wifi rescan"
 alias githelp="bat ~/.githelper.md"
 alias matlab="~/matlab/bin/matlab"
 alias githelp="bat ~/.githelp.md"
+alias fdd="figlet 'ESTA FUDIDO'"
+alias tetris="yetris"
 # tldr => simple man
 PS1='\w \$ '
 # xdg-open to view html pages
