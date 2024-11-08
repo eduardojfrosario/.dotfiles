@@ -215,7 +215,6 @@ colors = {
     "purple": "#bb70d2",
     "cyan": "#51a8b3",
     "orange": "#c49060",
-   
 }
 
 layout_theme = {
@@ -245,13 +244,26 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="Ubunto bold",
     fontsize=12,
-    padding=3,
+    padding=0,
 )
 
 extension_defaults = widget_defaults.copy()
+# separator = widget.TextBox(text=" ", padding=5)
+red_arrow = widget.TextBox(
+    text="🞀",
+    foreground=colors["red"],
+    background=colors["bg"],
+    fontsize=37,
+)
 
+bg_arrow = widget.TextBox(
+    text="🞀",
+    foreground=colors["bg"],
+    background=colors["red"],
+    fontsize=37,
+)
 screens = [
     Screen(
         top=bar.Bar(
@@ -263,11 +275,11 @@ screens = [
                     padding_y=5,
                     padding_x=5,
                     borderwidth=3,
-                    active=colors["yellow"],
+                    active=colors["red"],
                     inactive=colors["fg"],
                     highlight_method="line",
                     highlight_color=[colors["bg"], colors["bg"]],
-                    this_current_screen_border=colors["yellow"],
+                    this_current_screen_border=colors["fg"],
                     this_screen_border=colors["red"],
                     other_current_screen_border=colors["green"],
                     other_screen_border=colors["blue"],
@@ -277,63 +289,69 @@ screens = [
                 ),
                 widget.Prompt(),
                 widget.Spacer(),
-                widget.Spacer(),
+                red_arrow,
                 widget.Volume(
                     fmt="Vol: {}",
-                    foreground=colors["yellow"],
-                    background=colors["bg"],
+                    foreground=colors["bg"],
+                    background=colors["red"],
                 ),
+                bg_arrow,
                 widget.Battery(
                     format="{char}{percent:2.0%} {hour:d}:{min:02d}",
-                    foreground=colors["green"],
+                    foreground=colors["fg"],
                     background=colors["bg"],
                 ),
+                red_arrow,
                 widget.Backlight(
                     backlight_name="nvidia_wmi_ec_backlight",  # Replace with your actual device name
                     brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
                     max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
                     change_command="brightnessctl s {0}%",  # Command to change brightness
                     format="brightness: {percent:2.0%}",
-                    foreground=colors["cyan"],
-                    background=colors["bg"],
+                    foreground=colors["bg"],
+                    background=colors["red"],
                 ),
+                bg_arrow,
                 widget.CPU(
                     format="CPU: {load_percent}%",
-                    foreground=colors["red"],
+                    foreground=colors["fg"],
                     background=colors["bg"],
                 ),
+                red_arrow,
                 widget.Memory(
                     format="Mem: {MemUsed:.1f} GB/{MemTotal:.1f} GB",
-                    foreground=colors["purple"],
-                    background=colors["bg"],
+                    foreground=colors["bg"],
+                    background=colors["red"],
                     measure_mem="G",
                 ),
+                bg_arrow,
                 widget.Wlan(
-                    format="{essid} {percent:2.0%}",
-                    foreground=colors["blue"],
+                    format="直 {essid} ",
+                    disconnected_message="睊  Disconnected",
+                    foreground=colors["fg"],
                     background=colors["bg"],
                 ),
                 widget.Net(
                     format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}",
-                    foreground=colors["blue"],
+                    foreground=colors["fg"],
                     background=colors["bg"],
                 ),
                 widget.Systray(
-                    background=colors["bg"],
+                    background=colors["red"],
                     icon_size=20,
                     padding=5,
                 ),
+                red_arrow,
                 widget.Clock(
-                    format="%d-%m-%Y %a %H:%M",
-                    foreground=colors["orange"],
-                    background=colors["bg"],
-                    fontsize=14,
+                    format="  %a %d/%m/%y",
+                    foreground=colors["bg"],
+                    background=colors["red"],
                 ),
                 widget.Sep(
                     linewidth=0,
                     padding=6,
-                    foreground=colors["fg"],
-                    background=colors["bg"],
+                    foreground=colors["bg"],
+                    background=colors["red"],
                 ),
             ],
             24,
