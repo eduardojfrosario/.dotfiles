@@ -225,6 +225,7 @@ colors = {
     "purple": "#c678dd",
     "cyan": "#56b6c2",
     "orange": "#d19a66",
+    "dark_grey": "#3b3f4c",
 }
 
 layout_theme = {
@@ -263,7 +264,7 @@ extension_defaults = widget_defaults.copy()
 # separator = widget.TextBox(text=" ", padding=5)
 red_arrow = widget.TextBox(
     text="🞀",
-    foreground=colors["red"],
+    foreground=colors["dark_grey"],
     background=colors["bg"],
     fontsize=37,
 )
@@ -271,7 +272,7 @@ red_arrow = widget.TextBox(
 bg_arrow = widget.TextBox(
     text="🞀",
     foreground=colors["bg"],
-    background=colors["red"],
+    background=colors["dark_grey"],
     fontsize=37,
 )
 screens = [
@@ -302,8 +303,8 @@ screens = [
                 red_arrow,
                 widget.Volume(
                     fmt=" 🔊: {} ",
-                    foreground=colors["bg"],
-                    background=colors["red"],
+                    foreground=colors["fg"],
+                    background=colors["dark_grey"],
                 ),
                 bg_arrow,
                 widget.Backlight(
@@ -318,8 +319,8 @@ screens = [
                 red_arrow,
                 widget.Battery(
                     format="🔋 {char}{percent:2.0%} {hour:d}:{min:02d} ",
-                    foreground=colors["bg"],
-                    background=colors["red"],
+                    foreground=colors["fg"],
+                    background=colors["dark_grey"],
                     ),
                 bg_arrow,
                 widget.CPU(
@@ -330,8 +331,8 @@ screens = [
                 red_arrow,
                 widget.Memory(
                     format=" RAM: {MemUsed:.1f} GB/{MemTotal:.1f} GB ",
-                    foreground=colors["bg"],
-                    background=colors["red"],
+                    foreground=colors["fg"],
+                    background=colors["dark_grey"],
                     measure_mem="G",
                 ),
                 bg_arrow,
@@ -354,8 +355,8 @@ screens = [
                 red_arrow,
                 widget.Clock(
                     format="🕐 %H : %M ",
-                    foreground=colors["bg"],
-                    background=colors["red"],
+                    foreground=colors["fg"],
+                    background=colors["dark_grey"],
                 ),
                 bg_arrow,
                 widget.Clock(
