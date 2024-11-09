@@ -301,7 +301,7 @@ screens = [
                 widget.Spacer(),
                 red_arrow,
                 widget.Volume(
-                    fmt=" 🔊: {}",
+                    fmt=" 🔊: {} ",
                     foreground=colors["bg"],
                     background=colors["red"],
                 ),
@@ -311,25 +311,25 @@ screens = [
                     brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
                     max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
                     change_command="brightnessctl s {0}%",  # Command to change brightness
-                    format=" 🔆 {percent:2.0%}",
+                    format=" 🔆 {percent:2.0%} ",
                     foreground=colors["fg"],
                     background=colors["bg"],
                     ),
                 red_arrow,
                 widget.Battery(
-                    format="🔋 {char}{percent:2.0%} {hour:d}:{min:02d}",
+                    format="🔋 {char}{percent:2.0%} {hour:d}:{min:02d} ",
                     foreground=colors["bg"],
                     background=colors["red"],
                     ),
                 bg_arrow,
                 widget.CPU(
-                    format=" CPU: {load_percent}%",
+                    format=" CPU: {load_percent}% ",
                     foreground=colors["fg"],
                     background=colors["bg"],
                 ),
                 red_arrow,
                 widget.Memory(
-                    format=" RAM: {MemUsed:.1f} GB/{MemTotal:.1f} GB",
+                    format=" RAM: {MemUsed:.1f} GB/{MemTotal:.1f} GB ",
                     foreground=colors["bg"],
                     background=colors["red"],
                     measure_mem="G",
@@ -342,7 +342,7 @@ screens = [
                     background=colors["bg"],
                 ),
                 widget.Net(
-                    format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix}",
+                    format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix} ",
                     foreground=colors["fg"],
                     background=colors["bg"],
                 ),
@@ -353,7 +353,7 @@ screens = [
                 ),
                 red_arrow,
                 widget.Clock(
-                    format="🕐 %H : %M",
+                    format="🕐 %H : %M ",
                     foreground=colors["bg"],
                     background=colors["red"],
                 ),
