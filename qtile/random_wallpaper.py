@@ -1,12 +1,12 @@
 import os
 from random import choice
 
-# wallpapers_path = os.path.expanduser("~/Pictures/tokyo_night")
-# wallpapers_path = os.path.expanduser("~/Pictures/gruvbox")
-# wallpapers_path = os.path.expanduser("~/Pictures/kanagawa")
-# wallpapers_path = os.path.expanduser("~/Pictures/catppuccin")
-wallpapers_path = os.path.expanduser("~/Pictures/onedark")
-# wallpapers_path = os.path.expanduser("~/Pictures/Wallpapers")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/tokyo_night")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/gruvbox")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/kanagawa")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/catppuccin")
+wallpapers_path = os.path.expanduser("/home/losg/Pictures/onedark")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/Wallpapers")
 
 
 def pick_wallpaper():
