@@ -8,6 +8,8 @@ redshift &
 # Disable the bell
 xset -b &
 
+nm-applet &
+
 /usr/lib/polkit-kde-authentication-agent-1 &
 # Run the random wallpaper script
 python ~/.config/qtile/random_wallpaper.py &

@@ -336,12 +336,6 @@ screens = [
                     measure_mem="G",
                 ),
                 bg_arrow,
-                widget.Wlan(
-                    format=" 直 {essid} ",
-                    disconnected_message="睊  Disconnected",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
                 widget.Net(
                     format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix} ",
                     foreground=colors["fg"],
