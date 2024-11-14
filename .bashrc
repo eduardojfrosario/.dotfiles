@@ -72,9 +72,6 @@ bind -x '"\C-_": fzf_/'
 
 when
 
-# Created by `pipx` on 2024-07-03 23:03:04
-export PATH="$PATH:~/.local/bin"
-
 eval "$(zoxide init bash)"
 
 eval "$(starship init bash)"
