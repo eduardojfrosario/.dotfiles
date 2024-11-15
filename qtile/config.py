@@ -521,6 +521,7 @@ wl_xcursor_size = 24
 def autostart():
     autostartscript = "~/.config/qtile/autostart.sh"
     home = os.path.expanduser(autostartscript)
+    os.system("xrdb -merge ~/.Xresources")
     subprocess.Popen([home])
 
 
