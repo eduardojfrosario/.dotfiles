@@ -1,15 +1,17 @@
-
 [window]
 opacity = 1
-decorations = "Full"
-decorations_theme_variant = "Dark"
+# decorations = "Full"
+# decorations_theme_variant = "Dark"
 
   [window.padding]
   x = 5
   y = 5
 
+[env]
+    WINIT_X11_SCALE_FACTOR = "1"
+
 [font]
-size = 10
+size = 12
 
   [font.normal]
   family = "Hack Nerd Font Mono"

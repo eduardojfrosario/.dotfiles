@@ -76,7 +76,7 @@ eval "$(zoxide init bash)"
 
 eval "$(starship init bash)"
 
-eval "$(ssh-agent -s)"
+eval "$(ssh-agent -s)" > /dev/null
 
 ##-----------------------------------------------------
 ## alias
