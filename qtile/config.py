@@ -81,7 +81,7 @@ keys = [
     Key(
         [],
         "Print",
-        lazy.spawn("sh -c 'scrot ~/screenshots/%Y-%m-%d-%T-screenshot.png'"),
+        lazy.spawn("sh -c 'scrot ~/Screenshots/%Y-%m-%d-%T-screenshot.png'"),
     ),
     Key(["mod1", "control"], "l", lazy.spawn("/usr/local/bin/lock.sh")),
     # Sound
