@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Start picom
+picom &
+
 # Start redshift
 redshift &
 

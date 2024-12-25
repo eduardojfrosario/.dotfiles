@@ -1,3 +1,6 @@
 [user]
 	name = Eduardo Rosário
 	email = eduardojfrosario@gmail.com
+
+[diff]
+    external = difft
