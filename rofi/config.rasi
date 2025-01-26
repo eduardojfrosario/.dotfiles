@@ -21,4 +21,10 @@ configuration {
 //@theme "/home/losg/.local/share/rofi/themes/rounded-purple-dark.rasi"
 //@theme "/home/losg/.local/share/rofi/themes/windows11-list-dark.rasi"
 //@theme "/home/losg/.local/share/rofi/themes/rounded-red-dark.rasi"
-@theme "/home/losg/.local/share/rofi/themes/rounded-pink-dark.rasi"
+//@theme "/home/losg/.local/share/rofi/themes/rounded-pink-dark.rasi"
+
+//@theme "/home/losg/.local/share/rofi/themes/squared-everforest.rasi"
+
+//@theme "/home/losg/.local/share/rofi/themes/spotlight.rasi"
+
+@theme "/home/losg/.local/share/rofi/themes/spotlight-dark.rasi"

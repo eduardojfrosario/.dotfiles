@@ -175,6 +175,7 @@ colors = {
     # "purple": "#d3869b",
     # "cyan": "#8ec07c",  # its actually aqua
     # "orange": "#fe8019",
+
     # Tokyo Night
     # "bg": "#1a1b26",  # Background
     # "fg": "#a9b1d6",  # Foreground (Text)
@@ -185,6 +186,8 @@ colors = {
     # "purple": "#ad8ee6",  # Purple (Accent)
     # "cyan": "#449dab",  # Cyan (Secondary Info)
     # "orange": "#ff9e64",  # Orange (Accent)
+    # "dark_grey": "#292e42",
+
     # Kanagawa
     # "bg": "#1f1f28",       #  Sumire Black (Background)
     # "fg": "#dcd7ba",       #  Fuji White (Foreground)
@@ -195,6 +198,7 @@ colors = {
     # "purple": "#957fb8",   #  Oni Purple (Purple)
     # "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
     # "orange": "#e98a35"    #  Koi Carp Orange (Orange)
+
     # Catppuccin
     # "bg": "#1e1e2e",
     # "fg": "#cdd6f4",
@@ -205,6 +209,7 @@ colors = {
     # "purple": "#cba6f7",
     # "cyan": "#94e2d5",
     # "orange": "#fab387",
+
     # OneDark (Warmer)
     # "bg": "#232326",
     # "fg": "#a7aab0",
@@ -215,6 +220,7 @@ colors = {
     # "purple": "#bb70d2",
     # "cyan": "#51a8b3",
     # "orange": "#c49060",
+
     # OneDark
     "bg": "#282c34",
     "fg": "#abb2bf",

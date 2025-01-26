@@ -1,41 +1,20 @@
+[general]
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+]
+
 [window]
 opacity = 1
-# decorations = "Full"
-# decorations_theme_variant = "Dark"
 
   [window.padding]
   x = 5
   y = 5
 
 [env]
-    WINIT_X11_SCALE_FACTOR = "1"
+WINIT_X11_SCALE_FACTOR = "1"
 
 [font]
 size = 12
 
   [font.normal]
   family = "Hack Nerd Font Mono"
-
-[colors.primary]
-# background = "#232326"
-# foreground = "#a7aab0"
-  background = "#282c34"
-  foreground = "#abb2bf"
-
-[colors.normal]
-# black = "#101012"
-# red = "#de5d68"
-# green = "#8fb573"
-# yellow = "#dbb671"
-# blue = "#57a5e5"
-# magenta = "#bb70d2"
-# cyan = "#51a8b3"
-# white = "#a7aab0"
-black = "#181a1f"
-red = "#e86671"
-green = "#98c379"
-yellow = "#e5c07b"
-blue = "#61afef"
-magenta = "#c678dd"
-cyan = "#56b6c2"
-white = "#abb2bf"
