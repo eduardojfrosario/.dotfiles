@@ -17,7 +17,7 @@ set_dpms() {
 # Function to execute the file
 execute_file() {
     # Replace this with the file you want to execute
-    /usr/local/bin/lock.sh
+    /usr/local/bin/sleep.sh
     echo "Executed the file: $(date)"
 }
 
