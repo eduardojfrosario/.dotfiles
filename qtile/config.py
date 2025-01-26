@@ -77,7 +77,6 @@ keys = [
     Key([mod], "e", lazy.spawn("thunar")),
     Key([mod], "c", lazy.spawn("speedcrunch")),
     Key([mod], "a", lazy.spawn("ani-cli --rofi -v -q 1080")),
-    Key(["mod1", "control"], "a", lazy.spawn("matlab/bin/matlab")),
     Key(
         [],
         "Print",
