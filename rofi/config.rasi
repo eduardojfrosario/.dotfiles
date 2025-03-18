@@ -7,6 +7,7 @@ configuration {
         // The action to execute once the delay expires.
         action: "kb-cancel";
     }
+    icon-theme: "Numix-Circle";
     show-icons: true;
     // File browser mode.
     filebrowser {
