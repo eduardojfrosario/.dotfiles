@@ -176,16 +176,16 @@ colors = {
     # "orange": "#fe8019",
 
     # Tokyo Night
-    # "bg": "#1a1b26",  # Background
-    # "fg": "#a9b1d6",  # Foreground (Text)
-    # "red": "#f7768e",  # Red (Error)
-    # "green": "#9ece6a",  # Green (Success)
-    # "yellow": "#e0af68",  # Yellow (Warning)
-    # "blue": "#7aa2f7",  # Blue (Info)
-    # "purple": "#ad8ee6",  # Purple (Accent)
-    # "cyan": "#449dab",  # Cyan (Secondary Info)
-    # "orange": "#ff9e64",  # Orange (Accent)
-    # "dark_grey": "#292e42",
+    "bg": "#1a1b26",  # Background
+    "fg": "#a9b1d6",  # Foreground (Text)
+    "red": "#f7768e",  # Red (Error)
+    "green": "#9ece6a",  # Green (Success)
+    "yellow": "#e0af68",  # Yellow (Warning)
+    "blue": "#7aa2f7",  # Blue (Info)
+    "purple": "#ad8ee6",  # Purple (Accent)
+    "cyan": "#449dab",  # Cyan (Secondary Info)
+    "orange": "#ff9e64",  # Orange (Accent)
+    "dark_grey": "#292e42",
 
     # Kanagawa
     # "bg": "#1f1f28",       #  Sumire Black (Background)
@@ -221,16 +221,16 @@ colors = {
     # "orange": "#c49060",
 
     # OneDark
-    "bg": "#282c34",
-    "fg": "#abb2bf",
-    "red": "#e86671",
-    "green": "#98c379",
-    "yellow": "#e5c07b",
-    "blue": "#61afef",
-    "purple": "#c678dd",
-    "cyan": "#56b6c2",
-    "orange": "#d19a66",
-    "dark_grey": "#3b3f4c",
+    # "bg": "#282c34",
+    # "fg": "#abb2bf",
+    # "red": "#e86671",
+    # "green": "#98c379",
+    # "yellow": "#e5c07b",
+    # "blue": "#61afef",
+    # "purple": "#c678dd",
+    # "cyan": "#56b6c2",
+    # "orange": "#d19a66",
+    # "dark_grey": "#3b3f4c",
 }
 
 layout_theme = {

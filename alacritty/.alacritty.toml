@@ -1,6 +1,6 @@
 [general]
 import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+  "/usr/lib/node_modules/alacritty-themes/themes/Tokyonight_Night.toml"
 ]
 
 [window]
