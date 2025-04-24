@@ -71,7 +71,7 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod, "control"], "f", lazy.spawn("firefox")),
+    Key([mod, "control"], "f", lazy.spawn("zen-browser")),
     Key([mod], "d", lazy.spawn("rofi -show drun")),
     Key([mod, "shift"], "d", lazy.spawn(".config/rofi/open_file.sh")),
     Key([mod], "e", lazy.spawn("thunar")),

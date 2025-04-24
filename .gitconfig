@@ -4,3 +4,7 @@
 
 [diff]
     external = difft
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
