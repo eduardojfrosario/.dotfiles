@@ -269,17 +269,19 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 # separator = widget.TextBox(text=" ", padding=5)
 grey_arrow = widget.TextBox(
-    text="🞀",
+    text="⏴",
     foreground=colors["dark_grey"],
     background=colors["bg"],
-    fontsize=37,
+    padding=-10,
+    fontsize=60,
 )
 
 bg_arrow = widget.TextBox(
-    text="🞀",
+    text="⏴",
     foreground=colors["bg"],
     background=colors["dark_grey"],
-    fontsize=37,
+    fontsize=60,
+    padding=-10,
 )
 screens = [
     Screen(
