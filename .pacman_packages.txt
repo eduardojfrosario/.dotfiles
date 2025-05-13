@@ -174,7 +174,7 @@ dialog 1:1.3_20250116-1
 difftastic 0.63.0-1
 diffutils 3.11-2
 ding-libs 0.6.2-2
-discord 1:0.0.92-1
+discord 1:0.0.94-1
 discount 3.0.0.d-1
 djvulibre 3.5.28-6
 dkms 3.1.6-1
@@ -1177,7 +1177,7 @@ nemo-share 6.4.0-2
 nemo-theme-glacier 0.2.1-2
 neofetch 7.1.0-2
 neon 0.34.0-1
-neovim 0.10.4-2
+neovim 0.11.1-2
 net-snmp 5.9.4-6
 net-tools 2.10-3
 netctl 1.29-2
@@ -1492,6 +1492,7 @@ python-xcffib 1.5.0-2
 python-yaml 6.0.2-2
 python-yarl 1.13.1-1
 python312 3.12.9-1
+python39 3.9.21-1
 qca-qt5 2.3.10-1
 qca-qt6 2.3.10-1
 qcoro 0.11.0-1
