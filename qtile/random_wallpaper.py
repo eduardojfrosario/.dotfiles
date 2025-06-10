@@ -5,8 +5,8 @@ from random import choice
 # wallpapers_path = os.path.expanduser("/home/losg/Pictures/gruvbox")
 # wallpapers_path = os.path.expanduser("/home/losg/Pictures/kanagawa")
 # wallpapers_path = os.path.expanduser("/home/losg/Pictures/catppuccin")
-wallpapers_path = os.path.expanduser("/home/losg/Pictures/onedark")
-# wallpapers_path = os.path.expanduser("/home/losg/Pictures/Wallpapers")
+# wallpapers_path = os.path.expanduser("/home/losg/Pictures/onedark")
+wallpapers_path = os.path.expanduser("/home/losg/Pictures/Wallpapers")
 
 
 def pick_wallpaper():
