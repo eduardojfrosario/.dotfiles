@@ -1,6 +1,6 @@
 # desktop environment
-qtile || hyperland
-cinnamon
+hyperland
+kde
 
 # programming langs
 python / pip / venv
