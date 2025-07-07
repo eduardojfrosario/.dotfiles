@@ -109,46 +109,31 @@ alias grep='grep --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
 
+# shortcuts
 alias zshrc="nvim ~/.zshrc"
 alias c="clear -x"
 alias nf="fastfetch"
-alias nv="nvim"
 alias zzz="systemctl suspend"
 alias kys="shutdown now"
-alias cm="cmatrix"
-alias nt="fastfetch --file ~/logo.txt"
-alias win="fastfetch -l Windows"
-alias among="fastfetch -l AmogOs"
-alias anime="ani-cli -v -q 1080"
-alias dub="ani-cli -v --dub -q 1080"
-alias parrot="curl parrot.live"
+alias m='nvim .'
+alias f="fzf"
+alias githelp="bat ~/.githelp.md"
+alias wp="python ~/.config/qtile/random_wallpaper.py"
+alias cd='z'
+alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
+
+# partitions
+alias disk="ncdu"
 alias NV="sudo mkdir -p /run/media/losg/New\ Volume"
 alias MNV="sudo mount /dev/nvme0n1p4 '/run/media/losg/New Volume'"
 alias LD="sudo mkdir -p /run/media/losg/8AFA9A88FA9A6FE5"
 alias MLD="sudo mount /dev/nvme0n1p3 '/run/media/losg/8AFA9A88FA9A6FE5'"
-alias disk="ncdu"
-alias monkey="jp2a ~/Pictures/monke.jpeg --colors"
-alias dog="jp2a ~/Pictures/dog.jpg --colors"
-alias fate="jp2a ~/Pictures/dog-fate.jpg --colors"
-alias winxp="jp2a ~/Pictures/xp.jpg --colors"
-alias BS="jp2a ~/Pictures/batshrek.jpg --colors"
-alias aqua="asciiquarium"
-alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
-alias wifi="nm-connection-editor"
-alias wp="python ~/.config/qtile/random_wallpaper.py"
-alias rofisearch="~/.config/rofi/open_file.sh"
-alias cd='z'
-alias m='nvim .'
+
+# random
+alias anime="ani-cli -v -q 1080"
+alias dub="ani-cli -v --dub -q 1080"
 alias wisdom='fortune | cowsay -f actually'
 alias figlet="figlet -f slant"
-alias f="fzf"
-alias rescan="nmcli device wifi rescan"
-alias githelp="bat ~/.githelper.md"
-alias matlab="~/matlab/bin/matlab"
-alias githelp="bat ~/.githelp.md"
-alias fdd="figlet 'ESTA FUDIDO'"
-alias tetris="yetris"
-alias vimrc="vim ~/.vimrc"
 
 # xdg-open to view html pages
 export LC_ALL="en_US.UTF-8"
@@ -156,11 +141,6 @@ export LC_ALL="en_US.UTF-8"
 export BROWSER="/usr/bin/zen-browser"
 
 export PATH="/home/losg/.local/bin:$PATH"
-
-# ANTLR
-export CLASSPATH=".:/usr/local/lib/antlr-4.13.2-complete.jar:/usr/local/lib/ST-4.3.4.jar"
-export ANTLR4_PATH="/usr/local/lib"
-
 
 # Function to find and cd to a directory using fzf
 fzf_cd() {
