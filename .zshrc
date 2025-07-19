@@ -118,7 +118,7 @@ alias kys="shutdown now"
 alias m='nvim .'
 alias f="fzf"
 alias githelp="bat ~/.githelp.md"
-alias wp="python ~/.config/qtile/random_wallpaper.py"
+alias wp="~/.config/hypr/wp.sh"
 alias cd='z'
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
