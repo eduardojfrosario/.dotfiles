@@ -8,10 +8,5 @@
       day = 3000;
       night = 3000;
     };
-    settings = {
-      general = {
-        adjustment-method = "randr";
-      };
-    };
   };
 }

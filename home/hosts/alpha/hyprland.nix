@@ -22,7 +22,6 @@
           "XCURSOR_SIZE,24"
           "HYPRCURSOR_THEME,Qogir"
           "HYPRCURSOR_SIZE,24"
-	  "QT_STYLE_OVERRIDE,kvantum"
       ];
       
       monitor = [
