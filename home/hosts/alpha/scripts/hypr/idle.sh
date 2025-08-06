@@ -8,5 +8,6 @@ media_playing=$(playerctl status 2>/dev/null | grep -q 'Playing'; echo $?)
 
 # If neither is active, lock
 if [[ $in_discord_call -ne 0 && $media_playing -ne 0 ]]; then
+    systemctl suspend
     hyprlock
 fi
