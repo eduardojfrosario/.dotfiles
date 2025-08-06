@@ -13,9 +13,14 @@
 
   
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
+  boot.loader = {
+    grub = {
+      enable = true;
+      theme = pkgs.sleek-grub-theme;
+    };
+    efi.canTouchEfiVariables = true;
+    
+  }
   networking.hostName = "alpha"; # Define your hostname.
 
   # Enable networking
