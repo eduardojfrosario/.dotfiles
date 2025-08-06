@@ -15,7 +15,7 @@
       "$terminal"    = "alacritty";
       "$fileManager" = "nemo";
       "$menu"        = "rofi -show drun";
-      "resize_px"    = "20";
+      "$resize_px"    = "20";
 
       env = [
           "XCURSOR_THEME,Qogir"

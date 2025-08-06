@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check if Discord is in a call
 in_discord_call=$(pactl list sink-inputs | grep -i 'discord' | grep -i 'audio' | grep -q 'RUNNING'; echo $?)
