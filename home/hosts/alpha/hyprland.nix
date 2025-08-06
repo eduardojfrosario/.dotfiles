@@ -1,6 +1,4 @@
-let
-  resize_px = "20";
-in {
+{
   wayland.windowManager.hyprland = {
     enable          = true;
     systemd.enable  = true;
@@ -17,6 +15,7 @@ in {
       "$terminal"    = "alacritty";
       "$fileManager" = "nemo";
       "$menu"        = "rofi -show drun";
+      "resize_px"    = "20";
 
       env = [
           "XCURSOR_THEME,Qogir"
