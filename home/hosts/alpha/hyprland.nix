@@ -43,7 +43,7 @@
       general = {
         gaps_in     =  5;
         gaps_out    = 10;
-        border_size =  1;
+        border_size =  2;
         layout      = "dwindle";
       };
       
@@ -57,7 +57,6 @@
           enabled = true;
           range = 4;
           render_power = 3;
-          color = "rgba(1a1a1aee)";
         };
 
         blur = {
@@ -87,10 +86,15 @@
           "$mainMod, P, pseudo,"
           "$mainMod, F, fullscreen"
           "$mainMod, Tab, togglesplit,"
-          "$mainMod, A, exec, ani-cli --rofi -v -q 1080"
-          "$mainMod CTRL, R, exec, hyprctl dispatch restart"
           "CTRL ALT, L, exec, ~/.dotfiles/home/hosts/alpha/scripts/hypr/lock.sh"
 
+	  # Extra binds
+          "$mainMod, A, exec, ani-cli --rofi -v -q 1080"
+	  ",Print, exec, hyprshot hyprshot -m output --output-folder ~/Pictures/Screenshots"
+	  "SHIFT, Print, exec, hyprshot -m region --output-folder ~/Pictures/Screenshots" 
+	  "$mainMod, Print, exec, hyprshot -m region --clipboard-only"
+
+	  
           # Move focus with vim keys
           "$mainMod, H, movefocus, l"
           "$mainMod, L, movefocus, r"

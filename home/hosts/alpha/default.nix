@@ -2,19 +2,39 @@
 {
   imports = [
     ./hyprland.nix
+    ./hyprlock.nix
     ./waybar.nix
     ./spicetify.nix
-    ./btop.nix
     ./zsh.nix
     ./git.nix
     ./gammastep.nix
     ./alacritty.nix
-    ./gtk.nix
+    inputs.stylix.homeModules.stylix
   ];
 
   home.username      = "losg";
   home.homeDirectory = "/home/losg";
   home.stateVersion  = "23.11";
+
+
+  stylix = {
+    enable = true;
+
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+
+    fonts = {
+      monospace = {
+        package = pkgs.jetbrains-mono;
+        name = "Jetbrains Mono";
+      };
+    };
+    icons = {
+      enable = true;
+      package = pkgs.whitesur-icon-theme;
+      dark = "WhiteSur-dark";
+      light = "WhiteSur";
+    };
+  };
 
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.twilight-official
@@ -24,7 +44,7 @@
     brightnessctl playerctl
     networkmanagerapplet gammastep blueman
 
-    ripgrep fd bottom gnupg pinentry unzip lshw usbutils udiskie udisks fzf tree
+    ripgrep fd bottom gnupg pinentry unzip lshw usbutils udiskie udisks fzf tree btop
     wdisplays kdePackages.kdeconnect-kde unrar
     ffmpeg
 

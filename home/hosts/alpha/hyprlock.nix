@@ -1,11 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # Enable Hyprlock
   programs.hyprlock = {
     enable = true;
     settings = {
-      # Background configuration
       background = [{
         monitor = "eDP-1";
         blur = true;
@@ -85,14 +83,11 @@
     };
   };
 
-  # Ensure the required font is available
-  fonts.packages = with pkgs; [
-    hack-font
-    nerdfonts
+  # Optional: Add Hyprlock to system packages if you need the binary available globally
+  home.packages = with pkgs; [
+    hyprlock
+    nerd-fonts.hack
   ];
 
-  # Optional: Add Hyprlock to system packages if you need the binary available globally
-  environment.systemPackages = with pkgs; [
-    hyprlock
-  ];
+  stylix.targets.hyprlock.enable = false;
 }

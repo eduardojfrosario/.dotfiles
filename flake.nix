@@ -5,7 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    themes.url   = "github:RGBCube/ThemeNix";
+    stylix.url   = "github:danth/stylix";
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +23,7 @@
           inherit system;
           modules = [
             ./hosts/alpha
+	    inputs.stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs    = true;
               home-manager.useUserPackages  = true;

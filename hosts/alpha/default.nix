@@ -53,6 +53,8 @@
     variant = "";
   };
 
+  services.power-profiles-daemon.enable = true;
+
   # Configure console keymap
   console.keyMap = "pt-latin1";
 
