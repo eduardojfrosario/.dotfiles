@@ -46,4 +46,6 @@
     home-manager
     neovim vim git wget
   ];
+
+  programs.neovim.enable = true;
 }
