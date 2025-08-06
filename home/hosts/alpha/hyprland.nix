@@ -14,7 +14,7 @@
       "$mainMod"     = "SUPER";
       "$terminal"    = "alacritty";
       "$fileManager" = "nemo";
-      "$menu"        = "rofi -show drun";
+      "$menu"        = "rofi -show drun -show-icons";
       "$resize_px"    = "20";
 
       env = [
@@ -80,7 +80,7 @@
           "$mainMod, E, exec, $fileManager"
           "$mainMod, D, exec, $menu"
           "$mainMod CTRL, F, exec, zen"
-          "$mainMod, R, exec, rofi -show run"
+          "$mainMod, R, exec, rofi -show run -show-icons"
           "$mainMod, V, togglefloating,"
           "$mainMod, C, exec, speedcrunch"
           "$mainMod, P, pseudo,"
