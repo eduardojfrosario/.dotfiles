@@ -43,7 +43,7 @@
     libsForQt5.qt5.qtwayland qt6.qtwayland libsForQt5.qtstyleplugin-kvantum
     brightnessctl playerctl
     networkmanagerapplet gammastep blueman
-    sdl
+    SDL
 
     ripgrep fd bottom gnupg pinentry unzip lshw usbutils udiskie udisks fzf tree btop
     wdisplays kdePackages.kdeconnect-kde unrar
