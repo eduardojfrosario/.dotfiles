@@ -12,7 +12,7 @@
 
     settings = {
       "$mainMod"     = "SUPER";
-      "$terminal"    = "alacritty";
+      "$terminal"    = "ghostty";
       "$fileManager" = "nemo";
       "$menu"        = "rofi -show drun -show-icons";
       "$resize_px"    = "20";
