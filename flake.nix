@@ -12,9 +12,11 @@
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     disko.url = "github:nix-community/disko";
+
+    nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, disko, nvf, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -23,7 +25,8 @@
           inherit system;
           modules = [
             ./hosts/alpha
-	    inputs.stylix.nixosModules.stylix
+            inputs.stylix.nixosModules.stylix
+            nvf.homeManagerModules.default
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs    = true;
               home-manager.useUserPackages  = true;
