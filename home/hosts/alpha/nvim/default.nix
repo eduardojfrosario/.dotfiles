@@ -14,6 +14,7 @@
                 visuals.rainbow-delimiters.enable = true;
                 utility.undotree.enable = true;
                 autocomplete.nvim-cmp.enable = true;
+                autopairs.nvim-autopairs.enable = true;
                 languages = {
                     enableTreesitter = true;
 
@@ -23,13 +24,21 @@
                     rust.enable = true;
                     clang.enable = true;
                     java.enable = true;
-                    markdown.extensions.markview-nvim.enable = true;
+                    markdown.enable = true;
                 };
                 formatter.conform-nvim.enable = true;
                 extraLuaFiles = [
                     ./remap.lua
                     ./set.lua
                 ];
+                extraPlugins = with pkgs.vimPlugins; {
+                    markdown-preview = {
+                        package = markdown-preview-nvim;
+                        setup = ''
+                          vim.g.mkdp_filetypes = { "markdown" }
+                        '';
+                    };
+                };
             };
         };
     };
