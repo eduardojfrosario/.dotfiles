@@ -9,7 +9,7 @@
     ./git.nix
     ./gammastep.nix
     ./alacritty.nix
-    ./neovim.nix
+    ./nvim
     inputs.stylix.homeModules.stylix
   ];
 

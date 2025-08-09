@@ -29,15 +29,18 @@ vim.keymap.set("n", "Q", "<nop>")
 -- formats the entire file
 vim.keymap.set("n", "<leader>f", ':lua require("conform").format()<CR>')
 
--- hop between projects (doesn't work)
+-- hop between projects (tmux)
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionnizer<CR>")
 
 -- quick-fixes
 vim.keymap.set("n", "<leader>,", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- replaces the selected word (like F2)
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
+
+-- telescope
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
+vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})

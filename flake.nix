@@ -16,10 +16,9 @@
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = { self, nixpkgs, home-manager, disko, nvf, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, disko, ... }@inputs:
     let
       system = "x86_64-linux";
-      sharedModules = [ inputs.nvf.homeManagerModules.default ];
     in {
       nixosConfigurations =  {
         alpha = nixpkgs.lib.nixosSystem {
@@ -31,11 +30,8 @@
               home-manager.useGlobalPkgs    = true;
               home-manager.useUserPackages  = true;
               home-manager.users.losg        = import ./home/hosts/alpha;
-              home-manager.extraSpecialArgs = { inherit inputs sharedModules; };
+              home-manager.extraSpecialArgs = { inherit inputs; };
             }
-            home-manager.sharedModules [
-              inputs.nvf.homeManagerModules.default
-            ]
           ];
           specialArgs = { inherit inputs; };
         };
