@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 {
@@ -32,6 +33,19 @@
             enable = true;
             setupOpts.cursorline.enable = true;
           };
+        };
+
+        # ddiagnostics
+        diagnostics.enable = true;
+        diagnostics.config = {
+          virtual_text = true;
+          signs.text = lib.generators.mkLuaInline ''
+            {
+              [vim.diagnostic.severity.ERROR] = "󰅚 ",
+              [vim.diagnostic.severity.WARN] = "󰀪 ",
+            }
+          '';
+          underline = true;
         };
 
         languages = {
