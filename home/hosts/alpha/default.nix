@@ -9,7 +9,6 @@
     ./git.nix
     ./gammastep.nix
     ./alacritty.nix
-    ./zen.nix
     ./nvim
     inputs.stylix.homeModules.stylix
   ];
@@ -26,6 +25,7 @@
     cursor = {
       package = pkgs.qogir-icon-theme;
       name = "Qogir";
+      size = 24;
     };
 
     fonts = {
