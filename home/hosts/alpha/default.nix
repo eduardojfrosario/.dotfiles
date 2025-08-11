@@ -9,19 +9,24 @@
     ./git.nix
     ./gammastep.nix
     ./alacritty.nix
+    ./zen.nix
     ./nvim
     inputs.stylix.homeModules.stylix
   ];
 
-  home.username      = "losg";
+  home.username = "losg";
   home.homeDirectory = "/home/losg";
-  home.stateVersion  = "23.11";
-
+  home.stateVersion = "23.11";
 
   stylix = {
     enable = true;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+
+    cursor = {
+      package = pkgs.qogir-icon-theme;
+      name = "Qogir";
+    };
 
     fonts = {
       monospace = {
@@ -40,32 +45,79 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.twilight-official
 
-    dunst swww grim slurp swayidle swappy hyprshot rofi-wayland hyprlock
-    libsForQt5.qt5.qtwayland qt6.qtwayland libsForQt5.qtstyleplugin-kvantum
-    brightnessctl playerctl
-    networkmanagerapplet gammastep blueman
+    dunst
+    swww
+    grim
+    slurp
+    swayidle
+    swappy
+    hyprshot
+    rofi-wayland
+    hyprlock
+    libsForQt5.qt5.qtwayland
+    qt6.qtwayland
+    libsForQt5.qtstyleplugin-kvantum
+    brightnessctl
+    playerctl
+    networkmanagerapplet
+    gammastep
+    blueman
 
-    SDL2 SDL2_image SDL2_ttf SDL2_mixer SDL2_sound SDL2_net SDL2_gfx
+    SDL2
+    SDL2_image
+    SDL2_ttf
+    SDL2_mixer
+    SDL2_sound
+    SDL2_net
+    SDL2_gfx
 
-    ripgrep fd bottom gnupg pinentry unzip lshw usbutils udiskie udisks fzf tree btop
-    wdisplays kdePackages.kdeconnect-kde unrar
+    ripgrep
+    fd
+    bottom
+    gnupg
+    pinentry
+    unzip
+    lshw
+    usbutils
+    udiskie
+    udisks
+    fzf
+    tree
+    btop
+    wdisplays
+    kdePackages.kdeconnect-kde
+    unrar
     ffmpeg
 
     ghostty
 
     mullvad
 
-    docker docker-compose
+    docker
+    docker-compose
 
     difftastic
 
     # langs
-    rustc cargo rust-analyzer wasm-pack
-    gcc clang-tools gdb libcxx
-    lldb lld
-    mitscheme racket
-    python3 uv ruff python312Packages.jedi-language-server
-    bun nodejs typescript-language-server 
+    rustc
+    cargo
+    rust-analyzer
+    wasm-pack
+    gcc
+    clang-tools
+    gdb
+    libcxx
+    lldb
+    lld
+    mitscheme
+    racket
+    python3
+    uv
+    ruff
+    python312Packages.jedi-language-server
+    bun
+    nodejs
+    typescript-language-server
 
     # apps
     obsidian
@@ -85,10 +137,18 @@
     qogir-icon-theme
 
     # explorer
-    nemo nemo-fileroller gvfs shared-mime-info xdg-utils ffmpegthumbnailer webp-pixbuf-loader
+    nemo
+    nemo-fileroller
+    gvfs
+    shared-mime-info
+    xdg-utils
+    ffmpegthumbnailer
+    webp-pixbuf-loader
 
     # media
-    feh mpv vlc
+    feh
+    mpv
+    vlc
 
     # misc
     fastfetch

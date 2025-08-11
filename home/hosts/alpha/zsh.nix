@@ -66,6 +66,7 @@
       dub = "ani-cli -v --dub -q 1080";
       wisdom = "fortune | cowsay -f actually";
       figlet = "figlet -f slant";
+      snake = "python ~/Documents/snake-game/main.py";
       
       # ZNT aliases
       naliases = "n-aliases";
