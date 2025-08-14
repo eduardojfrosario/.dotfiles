@@ -66,6 +66,7 @@
             nix = [ "nixpkgs-fmt" ];
             c = [ "clang-format" ];
             python = [ "black" ];
+            rust = [ "rustfmt" ];
             javascript = [ "prettierd" ];
             typescript = [ "prettierd" ];
             javascriptreact = [ "prettierd" ];
@@ -93,6 +94,7 @@
   home.packages = with pkgs; [
     stylua
     black
+    rustfmt
     clang-tools
     prettierd
     nixpkgs-fmt
