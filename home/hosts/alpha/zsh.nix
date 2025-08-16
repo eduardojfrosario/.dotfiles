@@ -146,5 +146,4 @@
   programs.zoxide.enable = true;
   programs.starship.enable = true;
   programs.bat.enable = true;
-  programs.when.enable = true;
 }
