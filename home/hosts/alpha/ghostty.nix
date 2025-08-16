@@ -1,14 +1,20 @@
 {
   programs.ghostty = {
-    window-padding-x = 5;
-    window-padding-y = 5;
+    enable = true;
 
-    cursor-style = "block";
-    cursor-style-blink = false;
+    settings = {
+      window-padding-x = 5;
+      window-padding-y = 5;
 
-    clipboard-read = false;
-    clipboard-paste-protection = true;
+      cursor-style = "block";
+      cursor-style-blink = false;
+      shell-integration-features = "no-cursor";
 
-    confirm-close-surface = false;
+      clipboard-read = "deny";
+      clipboard-paste-protection = true;
+
+      confirm-close-surface = false;
+    };
   };
 }
+
