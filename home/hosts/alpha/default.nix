@@ -9,6 +9,7 @@
     ./git.nix
     ./gammastep.nix
     ./alacritty.nix
+    ./starship.nix
     ./nvim
     inputs.stylix.homeModules.stylix
   ];
