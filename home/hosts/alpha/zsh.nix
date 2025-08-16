@@ -130,6 +130,7 @@
     bat
     fastfetch
     ncdu
+    when
     
     # Entertainment
     fortune
@@ -138,9 +139,6 @@
     
     # File management and system tools
     upower
-    
-    # Note: Some packages like ani-cli might need to be installed separately
-    # or added to your system configuration if not available in nixpkgs
   ];
   
   # Additional programs configuration
