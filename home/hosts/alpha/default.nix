@@ -10,6 +10,7 @@
     ./gammastep.nix
     ./alacritty.nix
     ./starship.nix
+    ./ghostty.nix
     ./nvim
     inputs.stylix.homeModules.stylix
   ];
