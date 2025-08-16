@@ -82,6 +82,8 @@
     # Custom functions and additional configuration
     initContent = ''
       # Enable command correction
+      when
+
       setopt CORRECT
       
       # Set options for history and directory navigation
@@ -92,11 +94,13 @@
         local dir
         dir=$(find ~ -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
       }
-      
+      zle -N fzf_cd 
+
       fzf_/() {
         local dir
         dir=$(find / -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
       }
+      zle -N fzf_/ 
       
       # Key bindings
       bindkey '^F' fzf_cd
