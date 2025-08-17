@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WALLPAPER_DIR="$HOME/Pictures/onedark"
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
 # Get the current wallpaper path from swww
 CURRENT_WALL=$(swww query | grep 'image:' | awk -F'image: ' '{print $2}' | xargs basename)

@@ -59,7 +59,17 @@
 
         backlight = {
           format = "{percent}% {icon}";
-          format-icons = ["" "" "" "" "" "" "" "" ""];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
 
         battery = {
@@ -72,7 +82,13 @@
           format-charging = "{capacity}% ";
           format-plugged = "{capacity}% ";
           format-alt = "{time} {icon}";
-          format-icons = ["" "" "" "" ""];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
 
         "power-profiles-daemon" = {
@@ -101,7 +117,11 @@
             phone = "";
             portable = "";
             car = "";
-            default = ["" "" ""];
+            default = [
+              ""
+              ""
+              ""
+            ];
           };
           on-click = "pavucontrol";
         };
@@ -110,8 +130,8 @@
 
     # CSS styling
     style = ''
-      /* Waybar styles.css - OneDark Theme */
-      * {
+            /* Waybar styles.css - CyberDream Theme */
+            * {
           border: none;
           border-radius: 0;
           font-family: "JetBrains Mono", "Font Awesome 6 Free";
@@ -120,150 +140,124 @@
           margin: 3px;
       }
 
-      /* Main window - transparent background */
+      /* Main window */
       window#waybar {
-          background-color: rgb(40, 44, 52);
-          /* background-color: transparent; */
-          border-bottom: 2px solid rgb(92, 99, 112);
-          color: #abb2bf;
+          background-color: #16181a; /* base00 */
+          border-bottom: 2px solid #3c4048; /* base02 */
+          color: #ffffff; /* base05 */
           transition-property: background-color;
           transition-duration: 0.5s;
       }
 
-      /* Window when hidden */
       window#waybar.hidden {
           opacity: 0.2;
       }
 
-      /* Workspaces styling */
+      /* Workspaces */
       #workspaces {
           margin: 0 4px;
       }
 
       #workspaces button {
           padding: 0 8px;
-          background-color: rgba(52, 59, 70, 0.9);
-          color: #abb2bf;
+          background-color: #1e2124; /* base01 */
+          color: #ffffff; /* base05 */
           border-radius: 10px;
           margin: 0 2px;
           transition: all 0.3s ease;
       }
 
       #workspaces button.active {
-          background-color: rgba(224, 108, 117, 0.9);
-          color: #282c34;
+          background-color: #ff6e5e; /* base08 */
+          color: #16181a; /* base00 */
           font-weight: bold;
       }
 
       #workspaces button.urgent {
-          background-color: rgba(224, 108, 117, 0.9);
-          color: #282c34;
+          background-color: #ff6e5e; /* base08 */
+          color: #16181a; /* base00 */
       }
 
+      /* Custom separator */
       #custom-separator {
-          color: rgba(171, 178, 191, 0.3);
+          color: #7b8496; /* base03 */
           margin: 0;
           font-size: 14px;
           padding: 0;
           background-color: transparent;
-          border-radius: 0;
       }
 
       #custom-separator:hover {
-          color: rgba(171, 178, 191, 0.5);
-          background-color: transparent;
+          color: #5ea1ff; /* base04 */
       }
 
-      /* All other modules - rounded borders */
-      #clock,
-      #cpu,
-      #memory,
-      #backlight,
-      #battery,
-      #battery.bat2,
-      #pulseaudio,
-      #power-profiles-daemon,
-      #tray {
+      /* Modules */
+      #clock, #cpu, #memory, #backlight, #battery, #battery.bat2,
+      #pulseaudio, #power-profiles-daemon, #tray {
           padding: 0 12px;
           margin: 0 4px;
-          /* background-color: rgba(52, 59, 70, 0.9); */
-          color: #abb2bf;
+          color: #ffffff; /* base05 */
           border-radius: 10px;
           transition: all 0.3s ease;
       }
 
-      /* Hover effects for modules */
-      #clock:hover,
-      #cpu:hover,
-      #memory:hover,
-      #backlight:hover,
-      #battery:hover,
-      #battery.bat2:hover,
-      #pulseaudio:hover,
-      #tray:hover,
-      #power-profiles-daemon:hover {
-          background-color: rgb(92, 99, 112);
+      #clock:hover, #cpu:hover, #memory:hover, #backlight:hover, 
+      #battery:hover, #battery.bat2:hover, #pulseaudio:hover,
+      #tray:hover, #power-profiles-daemon:hover {
+          background-color: #3c4048; /* base02 */
       }
 
-      /* Clock specific styling */
+      /* Individual module colors */
       #clock {
           font-weight: bold;
-          color: #abb2bf;
+          color: #ffffff; /* base05 */
       }
 
-      /* CPU styling */
       #cpu {
-          color: #61afef;
+          color: #5ea1ff; /* base04 */
       }
 
-      /* Memory styling */
       #memory {
-          color: #d19a66;
+          color: #f1ff5e; /* base0A */
       }
 
-      /* Battery styling */
       #battery {
-          color: #98c379;
+          color: #5eff6c; /* base0B */
       }
 
       #battery.charging {
-          color: #61afef;
+          color: #5ea1ff; /* base04 */
       }
 
       #battery.warning:not(.charging) {
-          background-color: rgba(229, 192, 123, 0.8);
-          color: #282c34;
+          background-color: #f1ff5e; /* base0A */
+          color: #16181a; /* base00 */
       }
 
       #battery.critical:not(.charging) {
-          background-color: rgba(224, 108, 117, 0.8);
-          color: #abb2bf;
+          background-color: #ff6e5e; /* base08 */
+          color: #ffffff; /* base05 */
           animation: blink 0.5s linear infinite alternate;
       }
 
       @keyframes blink {
-          to {
-              background-color: rgba(224, 108, 117, 0.5);
-          }
+          to { background-color: #ff6e5e; } /* base08 */
       }
 
-      /* Backlight styling */
       #backlight {
-          color: #e5c07b;
+          color: #f1ff5e; /* base0A */
       }
 
-      /* Audio styling */
       #pulseaudio {
-          color: #c678dd;
+          color: #bd5eff; /* base0E */
       }
 
       #pulseaudio.muted {
-          color: #5c6370;
+          color: #7b8496; /* base03 */
       }
 
-      /* Power profiles styling */
       #power-profiles-daemon {
-          color: #98c379;
+          color: #5eff6c; /* base0B */
       }
 
       /* Tray styling */
@@ -273,19 +267,19 @@
 
       #tray > .needs-attention {
           -gtk-icon-effect: highlight;
-          background-color: rgba(224, 108, 117, 0.8);
+          background-color: #ff6e5e; /* base08 */
       }
 
       /* Tooltip styling */
       tooltip {
-          background-color: rgba(40, 44, 52, 0.9);
-          border: 1px solid rgba(171, 178, 191, 0.1);
+          background-color: #16181a; /* base00 */
+          border: 1px solid #7b8496; /* base03 */
           border-radius: 8px;
-          color: #abb2bf;
+          color: #ffffff; /* base05 */
       }
 
       tooltip label {
-          color: #abb2bf;
+          color: #ffffff; /* base05 */
       }
     '';
   };
@@ -296,9 +290,9 @@
   # Required packages for functionality including fonts
   home.packages = with pkgs; [
     waybar
-    pavucontrol          # For audio control
+    pavucontrol # For audio control
     power-profiles-daemon # For power profiles
-    jetbrains-mono       # Font for waybar
-    font-awesome         # Icons for waybar
+    jetbrains-mono # Font for waybar
+    font-awesome # Icons for waybar
   ];
 }

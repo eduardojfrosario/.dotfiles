@@ -15,6 +15,8 @@
       vim = {
         # lsp
         lsp.enable = true;
+        treesitter.enable = true;
+
         snippets.luasnip.enable = true;
         statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;
@@ -35,7 +37,7 @@
           };
         };
 
-        # ddiagnostics
+        # diagnostics
         diagnostics.enable = true;
         diagnostics.config = {
           virtual_text = true;
@@ -50,7 +52,7 @@
 
         languages = {
           enableTreesitter = true;
-
+          
           nix.enable = true;
           python.enable = true;
           ts.enable = true;
@@ -75,6 +77,12 @@
           };
         };
 
+        theme = {
+          enable = true;
+          style = "dark";
+          transparent = true;
+        };
+
         extraLuaFiles = [
           ./remap.lua
           ./set.lua
@@ -86,6 +94,9 @@
             setup = ''
               vim.g.mkdp_filetypes = { "markdown" }
             '';
+          };
+          cyberdream = {
+            package = cyberdream-nvim;
           };
         };
       };
@@ -100,4 +111,5 @@
     nixpkgs-fmt
   ];
 
+  stylix.targets.neovim.enable = false;
 }

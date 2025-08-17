@@ -83,7 +83,6 @@
     };
   };
 
-  # Optional: Add Hyprlock to system packages if you need the binary available globally
   home.packages = with pkgs; [
     hyprlock
     nerd-fonts.hack

@@ -5,6 +5,9 @@
     settings = {
       window-padding-x = 5;
       window-padding-y = 5;
+      
+      background-opacity = 1.0;
+      background-blur = true;
 
       cursor-style = "block";
       cursor-style-blink = false;
