@@ -95,8 +95,8 @@
               vim.g.mkdp_filetypes = { "markdown" }
             '';
           };
-          cyberdream = {
-            package = cyberdream-nvim;
+          kanagawa = {
+            package = kanagawa-nvim;
           };
         };
       };

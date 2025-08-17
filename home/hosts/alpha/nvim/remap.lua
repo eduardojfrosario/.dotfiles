@@ -68,29 +68,8 @@ cmp.setup {
   }
 }
 
-
--- Stylix with TS
--- variables
-vim.api.nvim_set_hl(0, "@variable", { link = "Normal" })
-vim.api.nvim_set_hl(0, "@variable.builtin", { link = "Identifier" })
-vim.api.nvim_set_hl(0, "@parameter", { link = "Identifier" })
-vim.api.nvim_set_hl(0, "@field", { link = "Identifier" })
-vim.api.nvim_set_hl(0, "@property", { link = "Identifier" })
-
--- constants and types
-vim.api.nvim_set_hl(0, "@constant", { link = "Constant" })
-vim.api.nvim_set_hl(0, "@type", { link = "Type" })
-vim.api.nvim_set_hl(0, "@type.builtin", { link = "Type" })
-
--- functions and methods
-vim.api.nvim_set_hl(0, "@function", { link = "Function" })
-vim.api.nvim_set_hl(0, "@function.call", { link = "Function" })
-vim.api.nvim_set_hl(0, "@method", { link = "Function" })
-vim.api.nvim_set_hl(0, "@method.call", { link = "Function" })
-
-
 -- colorscheme
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme kanagawa")
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
