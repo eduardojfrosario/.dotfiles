@@ -149,6 +149,7 @@
     # media
     feh
     mpv
+    gthumb
     vlc
 
     # misc
@@ -158,5 +159,6 @@
     prismlauncher
     superTux
     superTuxKart
+    ttyper
   ];
 }
