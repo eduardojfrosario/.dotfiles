@@ -65,20 +65,6 @@
           shadow_size = 6;
           shadow_color = "rgba(0, 0, 0, 0.7)";
         }
-        # Username display
-        {
-          text = "Welcome back, $USER";
-          font_family = "Hack Nerd Font";
-          font_size = 24;
-          color = "rgba(180, 190, 254, 0.8)";
-          position = "0, -140";
-          halign = "center";
-          valign = "center";
-          monitor = "eDP-1";
-          shadow_passes = 1;
-          shadow_size = 3;
-          shadow_color = "rgba(0, 0, 0, 0.5)";
-        }
       ];
     };
   };
