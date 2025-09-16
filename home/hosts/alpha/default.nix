@@ -119,6 +119,8 @@
     bun
     nodejs
     typescript-language-server
+    jdk
+    maven
 
     # apps
     obsidian
