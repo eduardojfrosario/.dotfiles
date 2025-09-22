@@ -122,6 +122,10 @@
     jdk
     maven
 
+
+    # screen 
+    wdisplays
+    
     # apps
     obsidian
     libreoffice
@@ -149,7 +153,6 @@
     webp-pixbuf-loader
 
     # media
-    feh
     mpv
     gthumb
     vlc
