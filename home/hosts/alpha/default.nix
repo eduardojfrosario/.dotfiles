@@ -79,7 +79,6 @@
     pinentry
     unzip
     p7zip
-    p7zip-rar
     lshw
     usbutils
     udiskie
@@ -100,6 +99,9 @@
     docker-compose
 
     difftastic
+
+    virtualbox
+    virt-manager
 
     # langs
     rustc
