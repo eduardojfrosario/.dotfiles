@@ -5,13 +5,12 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ../../system/common.nix
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ../../system/common.nix
+    ./hardware-configuration.nix
+  ];
 
-  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -22,9 +21,9 @@
   networking.networkmanager.enable = true;
 
   virtualisation.docker = {
-    enable  = true;
+    enable = true;
     rootless = {
-      enable            = true;
+      enable = true;
       setSocketVariable = true;
     };
   };
@@ -47,7 +46,6 @@
   #   };
   # };
 
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "pt";
@@ -67,30 +65,70 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    audio.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
+    wireplumber.extraConfig = {
+      "10-bluez" = {
+        "monitor.bluez.properties" = {
+          "bluez5.enable-sbc-xq" = true;
+          "bluez5.enable-msbc" = true;
+          "bluez5.enable-hw-volume" = true;
+          "bluez5.headset-roles" = [
+            "hsp_hs"
+            "hsp_ag"
+            "hfp_hf"
+            "hfp_ag"
+          ];
+          "bluez5.codecs" = [
+            "sbc"
+            "sbc_xq"
+            "aac"
+            "ldac"
+          ];
+        };
+      };
+      "11-bluetooth-policy" = {
+        "wireplumber.settings" = {
+          "bluetooth.autoswitch-to-headset-profile" = false;
+        };
+      };
+    };
   };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
+      };
+    };
+  };
+  services.blueman.enable = true;
 
   hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      forceFullCompositionPipeline = true;
-      powerManagement.enable       = true;
-      modesetting.enable           = true;
-      nvidiaSettings               = true;
-      open                         = false;
-      prime = {
-        offload.enable = true;
-        intelBusId  = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    forceFullCompositionPipeline = true;
+    powerManagement.enable = true;
+    modesetting.enable = true;
+    nvidiaSettings = true;
+    open = false;
+    prime = {
+      offload.enable = true;
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_PL          = "1";
+    NIXOS_OZONE_PL = "1";
   };
 
   xdg.portal.enable = true;
@@ -103,7 +141,11 @@
   users.users.losg = {
     isNormalUser = true;
     description = "Losg";
-    extraGroups = [ "networkmanager" "docker" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "docker"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -112,14 +154,15 @@
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     wayland
-     wl-clipboard
-     xdg-desktop-portal-hyprland
-     xdg-utils
+    wayland
+    wl-clipboard
+    xdg-desktop-portal-hyprland
+    xdg-utils
+    bluez
+    bluez-tools
   ];
 
   fonts.packages = with pkgs; [

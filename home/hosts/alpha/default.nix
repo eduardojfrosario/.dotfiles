@@ -78,6 +78,8 @@
     gnupg
     pinentry
     unzip
+    p7zip
+    p7zip-rar
     lshw
     usbutils
     udiskie
