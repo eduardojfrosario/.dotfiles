@@ -100,8 +100,9 @@
 
     difftastic
 
-    virtualbox
     virt-manager
+    qemu
+    libvirt
 
     # langs
     rustc

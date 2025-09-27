@@ -15,6 +15,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernelModules = [
+    "kvm"
+    "kvm-intel"
+    "kvm-amd"
+  ];
+
   networking.hostName = "alpha"; # Define your hostname.
 
   # Enable networking
@@ -27,6 +33,10 @@
       setSocketVariable = true;
     };
   };
+  virtualisation.libvirtd = {
+    enable = true;
+  };
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -145,6 +155,11 @@
       "networkmanager"
       "docker"
       "wheel"
+      "libvirtd"
+      "qemu-libvirtd"
+      "video"
+      "audio"
+      "disk"
     ];
     shell = pkgs.zsh;
   };
@@ -163,6 +178,10 @@
     xdg-utils
     bluez
     bluez-tools
+    qemu_kvm # QEMU/KVM virtualization
+    virt-manager # Virt Manager GUI
+    libvirt # Main libvirt tools and clients
+    bridge-utils # Network bridging utilities
   ];
 
   fonts.packages = with pkgs; [
