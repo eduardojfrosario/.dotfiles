@@ -21,7 +21,8 @@
     "kvm-amd"
   ];
 
-  networking.hostName = "alpha"; # Define your hostname.
+  # hostname
+  networking.hostName = "alpha";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -45,16 +46,6 @@
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
   services.desktopManager.gnome.enable = true;
-
-  # services.greetd = {
-  #   enable   = true;
-  #   settings = {
-  #     default_session = {
-  #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-  #       user    = "greeter";
-  #     };
-  #   };
-  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -111,6 +102,7 @@
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
+    package = pkgs.bluez;
     settings = {
       General = {
         Enable = "Source,Sink,Media,Socket";
@@ -119,6 +111,16 @@
     };
   };
   services.blueman.enable = true;
+
+  systemd.services.unblock-bluetooth = {
+    description = "Unblock Bluetooth on boot";
+    after = [ "bluetooth.service" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.util-linux}/bin/rfkill unblock bluetooth";
+    };
+  };
 
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;

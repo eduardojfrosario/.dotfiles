@@ -109,6 +109,7 @@
     cargo
     rust-analyzer
     wasm-pack
+
     gcc
     clang-tools
     gdb
@@ -117,13 +118,16 @@
     lld
     mitscheme
     racket
+
     python3
     uv
     ruff
     python312Packages.jedi-language-server
+
     bun
     nodejs
     typescript-language-server
+
     jdk
     maven
 
@@ -144,6 +148,7 @@
     alacritty
     speedcrunch
     discord
+    postman
 
     # icons
     qogir-icon-theme
