@@ -143,7 +143,7 @@
     gparted
     ani-cli
     pavucontrol
-    vscodium
+    vscode
     mullvad-browser
     alacritty
     speedcrunch
