@@ -46,7 +46,7 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages.x86_64-linux.twilight-official
 
-    dunst
+    mako
     swww
     grim
     slurp
@@ -144,7 +144,6 @@
     ani-cli
     pavucontrol
     vscode
-    mullvad-browser
     alacritty
     speedcrunch
     discord

@@ -29,7 +29,7 @@
       ];
 
       exec-once = [
-        "waybar & gammastep & nm-applet & blueman-applet & swww-daemon & dunst & mullvad-vpn &"
+        "waybar & gammastep & nm-applet & blueman-applet & swww-daemon & mako & mullvad-vpn &"
         "~/.dotfiles/home/hosts/alpha/scripts/hypr/wp.sh"
         "swayidle -w timeout 300 '~/.dotfiles/home/hosts/alpha/scripts/hypr/idle.sh' resume ''"
       ];
