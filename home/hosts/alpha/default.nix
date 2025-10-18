@@ -11,6 +11,7 @@
     ./alacritty.nix
     ./starship.nix
     ./ghostty.nix
+    ./mako.nix
     ./nvim
     inputs.stylix.homeModules.stylix
   ];
