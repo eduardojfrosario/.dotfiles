@@ -149,6 +149,7 @@
     speedcrunch
     discord
     postman
+    bleachbit
 
     # icons
     qogir-icon-theme
