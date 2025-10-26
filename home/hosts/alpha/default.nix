@@ -133,7 +133,7 @@
 
 
     # screen 
-    nwg-displays
+    wdisplays
     
     # apps
     obsidian
