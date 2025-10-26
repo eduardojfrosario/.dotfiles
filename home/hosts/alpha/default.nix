@@ -87,7 +87,6 @@
     fzf
     tree
     btop
-    wdisplays
     kdePackages.kdeconnect-kde
     unrar
     ffmpeg
@@ -134,7 +133,7 @@
 
 
     # screen 
-    wdisplays
+    nwg-displays
     
     # apps
     obsidian
