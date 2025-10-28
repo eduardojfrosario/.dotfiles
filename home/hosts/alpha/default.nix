@@ -78,8 +78,10 @@
     bottom
     gnupg
     pinentry
+    zip
     unzip
     p7zip
+    unrar
     lshw
     usbutils
     udiskie
@@ -156,6 +158,7 @@
     # explorer
     nemo
     nemo-fileroller
+    file-roller
     gvfs
     shared-mime-info
     xdg-utils
