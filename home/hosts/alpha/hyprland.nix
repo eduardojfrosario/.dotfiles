@@ -13,7 +13,7 @@
     settings = {
       "$mainMod" = "SUPER";
       "$terminal" = "ghostty";
-      "$fileManager" = "nautilus";
+      "$fileManager" = "nemo";
       "$menu" = "rofi -show drun -show-icons";
       "$resize_px" = "20";
 
