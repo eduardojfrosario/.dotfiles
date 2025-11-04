@@ -91,7 +91,7 @@
     btop
     kdePackages.kdeconnect-kde
     unrar
-    ffmpeg
+    wf-recorder
 
     ghostty
 
@@ -132,7 +132,6 @@
 
     jdk
     maven
-
 
     # screen 
     wdisplays
