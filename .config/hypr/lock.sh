@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
+systemctl suspend
 playerctl stop
 hyprlock

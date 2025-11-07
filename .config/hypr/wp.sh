@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-WALLPAPER_DIR="$HOME/Pictures/onedark"
+WALLPAPER_DIR="$HOME/Pictures/kanagawa"
 
 # Get the current wallpaper path from swww
 CURRENT_WALL=$(swww query | grep 'image:' | awk -F'image: ' '{print $2}' | xargs basename)
@@ -10,4 +10,3 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$CURRENT_WALL" | shuf -n 1)
 
 # Set the wallpaper with a transition (optional)
 swww img "$WALLPAPER" --transition-type none
-

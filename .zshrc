@@ -107,7 +107,7 @@ alias ls='ls --color=auto'
 alias la='ls -A --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
+alias l='ls -lav --ignore=".*"'   # show long listing but no hidden dotfiles except "."
 
 # shortcuts
 alias zshrc="nvim ~/.zshrc"
@@ -130,8 +130,6 @@ alias LD="sudo mkdir -p /run/media/losg/8AFA9A88FA9A6FE5"
 alias MLD="sudo mount /dev/nvme0n1p3 '/run/media/losg/8AFA9A88FA9A6FE5'"
 
 # random
-alias anime="ani-cli -v -q 1080"
-alias dub="ani-cli -v --dub -q 1080"
 alias wisdom='fortune | cowsay -f actually'
 alias figlet="figlet -f slant"
 
@@ -147,12 +145,14 @@ fzf_cd() {
   local dir
   dir=$(find ~ -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
 }
+zle -N fzf_cd
 
 
 fzf_/() {
   local dir
   dir=$(find / -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
 }
+zle -N fzf_/
 
 
 bindkey '^F' fzf_cd
@@ -174,7 +174,6 @@ autoload znt-usetty-wrapper znt-history-widget znt-cd-widget znt-kill-widget
 alias naliases=n-aliases ncd=n-cd nenv=n-env nfunctions=n-functions nhistory=n-history
 alias nkill=n-kill noptions=n-options npanelize=n-panelize nhelp=n-help
 zle -N znt-history-widget
-bindkey '^R' znt-history-widget
 setopt AUTO_PUSHD HIST_IGNORE_DUPS PUSHD_IGNORE_DUPS
 zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 ### END ###

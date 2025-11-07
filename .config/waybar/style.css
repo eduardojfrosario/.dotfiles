@@ -1,178 +1,151 @@
-/* Waybar styles.css - OneDark Theme */
+/* Waybar Rosé Pine Theme */
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
     font-size: 12px;
     min-height: 0;
     margin: 3px;
 }
 
-/* Main window - transparent background */
+/* Main bar */
 window#waybar {
-    background-color: rgb(40, 44, 52);
-    /* background-color: transparent; */
-    border-bottom: 2px solid rgb(92, 99, 112);
-    color: #abb2bf;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+    background-color: #191724; /* base - surface */
+    border-bottom: 2px solid #26233a; /* overlay */
+    color: #e0def4; /* text */
+    transition: background-color 0.5s;
 }
 
-/* Window when hidden */
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/* Workspaces styling */
+/* Workspaces */
 #workspaces {
     margin: 0 4px;
 }
 
 #workspaces button {
     padding: 0 8px;
-    background-color: rgba(52, 59, 70, 0.9);
-    color: #abb2bf;
+    background-color: #26233a; /* overlay */
+    color: #e0def4; /* text */
     border-radius: 10px;
     margin: 0 2px;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    background-color: rgba(224, 108, 117, 0.9);
-    color: #282c34;
+    background-color: #eb6f92; /* love */
+    color: #191724; /* surface */
     font-weight: bold;
 }
 
 #workspaces button.urgent {
-    background-color: rgba(224, 108, 117, 0.9);
-    color: #282c34;
+    background-color: #eb6f92; /* love */
+    color: #191724; /* surface */
 }
 
+/* Separator */
 #custom-separator {
-    color: rgba(171, 178, 191, 0.3);
+    color: #6e6a86; /* muted */
     margin: 0;
     font-size: 14px;
     padding: 0;
     background-color: transparent;
-    border-radius: 0;
-
 }
 
 #custom-separator:hover {
-    color: rgba(171, 178, 191, 0.5);
-    background-color: transparent;
+    color: #908caa; /* subtle */
 }
 
-/* All other modules - rounded borders */
-#clock,
-#cpu,
-#memory,
-#backlight,
-#battery,
-#battery.bat2,
-#pulseaudio,
-#power-profiles-daemon,
-#tray {
+/* Modules */
+#clock, #cpu, #memory, #backlight, #battery, #pulseaudio,
+#power-profiles-daemon, #tray {
     padding: 0 12px;
     margin: 0 4px;
-    /* background-color: rgba(52, 59, 70, 0.9); */
-    color: #abb2bf;
     border-radius: 10px;
+    color: #e0def4; /* text */
     transition: all 0.3s ease;
 }
 
-/* Hover effects for modules */
-#clock:hover,
-#cpu:hover,
-#memory:hover,
-#backlight:hover,
-#battery:hover,
-#battery.bat2:hover,
-#pulseaudio:hover,
-#tray:hover,
-#power-profiles-daemon:hover {
-    background-color: rgb(92, 99, 112);
+#clock:hover, #cpu:hover, #memory:hover, #backlight:hover,
+#battery:hover, #pulseaudio:hover, #power-profiles-daemon:hover,
+#tray:hover {
+    background-color: #26233a; /* overlay */
 }
 
-/* Clock specific styling */
+/* Individual colors */
 #clock {
     font-weight: bold;
-    color: #abb2bf;
+    color: #f6c177; /* gold */
 }
 
-/* CPU styling */
 #cpu {
-    color: #61afef;
+    color: #9ccfd8; /* foam */
 }
 
-/* Memory styling */
 #memory {
-    color: #d19a66;
+    color: #f6c177; /* gold */
 }
 
-/* Battery styling */
+#backlight {
+    color: #ebbcba; /* rose */
+}
+
 #battery {
-    color: #98c379;
+    color: #31748f; /* pine */
 }
 
 #battery.charging {
-    color: #61afef;
+    color: #9ccfd8; /* foam */
 }
 
 #battery.warning:not(.charging) {
-    background-color: rgba(229, 192, 123, 0.8);
-    color: #282c34;
+    background-color: #f6c177; /* gold */
+    color: #191724; /* surface */
 }
 
 #battery.critical:not(.charging) {
-    background-color: rgba(224, 108, 117, 0.8);
-    color: #abb2bf;
+    background-color: #eb6f92; /* love */
+    color: #e0def4; /* text */
     animation: blink 0.5s linear infinite alternate;
 }
 
 @keyframes blink {
-    to {
-        background-color: rgba(224, 108, 117, 0.5);
-    }
+    to { background-color: #eb6f92; } /* love */
 }
 
-/* Backlight styling */
-#backlight {
-    color: #e5c07b;
-}
-
-/* Audio styling */
 #pulseaudio {
-    color: #c678dd;
+    color: #c4a7e7; /* iris */
 }
 
 #pulseaudio.muted {
-    color: #5c6370;
+    color: #6e6a86; /* muted */
 }
 
-/* Power profiles styling */
 #power-profiles-daemon {
-    color: #98c379;
+    color: #31748f; /* pine */
 }
 
-/* Tray styling */
+/* Tray */
 #tray > .passive {
     -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: rgba(224, 108, 117, 0.8);
+    background-color: #eb6f92; /* love */
 }
 
-/* Tooltip styling */
+/* Tooltips */
 tooltip {
-    background-color: rgba(40, 44, 52, 0.9);
-    border: 1px solid rgba(171, 178, 191, 0.1);
+    background-color: #191724; /* surface */
+    border: 1px solid #6e6a86; /* muted */
     border-radius: 8px;
-    color: #abb2bf;
+    color: #e0def4; /* text */
 }
 
 tooltip label {
-    color: #abb2bf;
+    color: #e0def4; /* text */
 }
+

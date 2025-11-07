@@ -1,0 +1,12 @@
+[global]
+default-timeout=3000
+
+#anchor=top-right
+#margin=10
+
+background=#191724  # Dark background
+border-color=#3e3a59 # Slightly lighter border
+text-color=#e0def4   # Soft off-white text
+
+[app-name="blueman"]
+invisible=1
