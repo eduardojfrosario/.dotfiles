@@ -1,4 +1,4 @@
-/* Waybar Rosé Pine Theme */
+/* Waybar Kanagawa Theme */
 * {
     border: none;
     border-radius: 0;
@@ -10,9 +10,9 @@
 
 /* Main bar */
 window#waybar {
-    background-color: #191724; /* base - surface */
-    border-bottom: 2px solid #26233a; /* overlay */
-    color: #e0def4; /* text */
+    background-color: #1F1F28; /* sumiInk0 */
+    border-bottom: 2px solid #2A2A37; /* sumiInk1 */
+    color: #DCD7BA; /* fujiWhite */
     transition: background-color 0.5s;
 }
 
@@ -27,27 +27,27 @@ window#waybar.hidden {
 
 #workspaces button {
     padding: 0 8px;
-    background-color: #26233a; /* overlay */
-    color: #e0def4; /* text */
+    background-color: #2A2A37; /* sumiInk1 */
+    color: #DCD7BA; /* fujiWhite */
     border-radius: 10px;
     margin: 0 2px;
     transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    background-color: #eb6f92; /* love */
-    color: #191724; /* surface */
+    background-color: #C34043; /* oniViolet / red */
+    color: #1F1F28; /* sumiInk0 */
     font-weight: bold;
 }
 
 #workspaces button.urgent {
-    background-color: #eb6f92; /* love */
-    color: #191724; /* surface */
+    background-color: #C34043; /* red */
+    color: #1F1F28; /* sumiInk0 */
 }
 
 /* Separator */
 #custom-separator {
-    color: #6e6a86; /* muted */
+    color: #727169; /* fujiGray (muted) */
     margin: 0;
     font-size: 14px;
     padding: 0;
@@ -55,7 +55,7 @@ window#waybar.hidden {
 }
 
 #custom-separator:hover {
-    color: #908caa; /* subtle */
+    color: #C8C093; /* oldWhite (subtle) */
 }
 
 /* Modules */
@@ -64,67 +64,67 @@ window#waybar.hidden {
     padding: 0 12px;
     margin: 0 4px;
     border-radius: 10px;
-    color: #e0def4; /* text */
+    color: #DCD7BA; /* fujiWhite */
     transition: all 0.3s ease;
 }
 
 #clock:hover, #cpu:hover, #memory:hover, #backlight:hover,
 #battery:hover, #pulseaudio:hover, #power-profiles-daemon:hover,
 #tray:hover {
-    background-color: #26233a; /* overlay */
+    background-color: #2A2A37; /* sumiInk1 */
 }
 
 /* Individual colors */
 #clock {
     font-weight: bold;
-    color: #f6c177; /* gold */
+    color: #E6C384; /* carpYellow (gold) */
 }
 
 #cpu {
-    color: #9ccfd8; /* foam */
+    color: #7FB4CA; /* light blue (foam-ish) */
 }
 
 #memory {
-    color: #f6c177; /* gold */
+    color: #E6C384; /* gold */
 }
 
 #backlight {
-    color: #ebbcba; /* rose */
+    color: #D27E99; /* sakura (rose) */
 }
 
 #battery {
-    color: #31748f; /* pine */
+    color: #7AA89F; /* waveAqua (teal/pine) */
 }
 
 #battery.charging {
-    color: #9ccfd8; /* foam */
+    color: #7FB4CA; /* light blue */
 }
 
 #battery.warning:not(.charging) {
-    background-color: #f6c177; /* gold */
-    color: #191724; /* surface */
+    background-color: #E6C384; /* gold */
+    color: #1F1F28; /* dark surface for contrast */
 }
 
 #battery.critical:not(.charging) {
-    background-color: #eb6f92; /* love */
-    color: #e0def4; /* text */
+    background-color: #C34043; /* red */
+    color: #DCD7BA; /* text */
     animation: blink 0.5s linear infinite alternate;
 }
 
 @keyframes blink {
-    to { background-color: #eb6f92; } /* love */
+    to { background-color: #C34043; } /* red */
 }
 
 #pulseaudio {
-    color: #c4a7e7; /* iris */
+    color: #957FB8; /* crystalPurple (iris) */
 }
 
 #pulseaudio.muted {
-    color: #6e6a86; /* muted */
+    color: #727169; /* muted */
 }
 
 #power-profiles-daemon {
-    color: #31748f; /* pine */
+    color: #7AA89F; /* teal */
 }
 
 /* Tray */
@@ -134,18 +134,18 @@ window#waybar.hidden {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb6f92; /* love */
+    background-color: #C34043; /* red */
 }
 
 /* Tooltips */
 tooltip {
-    background-color: #191724; /* surface */
-    border: 1px solid #6e6a86; /* muted */
+    background-color: #1F1F28; /* base */
+    border: 1px solid #727169; /* muted */
     border-radius: 8px;
-    color: #e0def4; /* text */
+    color: #DCD7BA; /* text */
 }
 
 tooltip label {
-    color: #e0def4; /* text */
+    color: #DCD7BA; /* text */
 }
 

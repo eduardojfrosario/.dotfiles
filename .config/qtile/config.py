@@ -79,7 +79,7 @@ keys = [
         "Print",
         lazy.spawn("sh -c 'scrot ~/Screenshots/%Y-%m-%d-%T-screenshot.png'"),
     ),
-    Key(["mod1", "control"], "l", lazy.spawn("~/.config/qtile/lock.sh")),
+    Key(["mod1", "control"], "l", lazy.spawn("/home/losg/.config/qtile/lock.sh")),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key(
@@ -298,6 +298,7 @@ floating_layout = layout.Floating(
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+focus_previous_on_window_remove = False
 reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
