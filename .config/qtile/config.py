@@ -14,7 +14,7 @@
 import os
 import subprocess
 import iwlib
-from libqtile import bar, layout, qtile, widget, hook
+from libqtile import bar, layout, qtile, hook
 from libqtile.config import (
     Click,
     Drag,
@@ -24,11 +24,10 @@ from libqtile.config import (
     Screen,
 )
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 mod = "mod4"
 
-terminal = guess_terminal()
+terminal = "ghostty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -72,16 +71,15 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod, "control"], "f", lazy.spawn("zen-browser")),
-    Key([mod], "d", lazy.spawn("rofi -show drun")),
-    Key([mod], "e", lazy.spawn("thunar")),
+    Key([mod], "d", lazy.spawn("rofi -show drun -show-icons")),
+    Key([mod], "e", lazy.spawn("nemo")),
     Key([mod], "c", lazy.spawn("speedcrunch")),
-    Key([mod], "a", lazy.spawn("ani-cli --rofi -v -q 1080")),
     Key(
         [],
         "Print",
         lazy.spawn("sh -c 'scrot ~/Screenshots/%Y-%m-%d-%T-screenshot.png'"),
     ),
-    Key(["mod1", "control"], "l", lazy.spawn("/usr/local/bin/lock.sh")),
+    Key(["mod1", "control"], "l", lazy.spawn("~/.config/qtile/lock.sh")),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
     Key(
@@ -96,19 +94,19 @@ keys = [
     ),
     # Brightness
     # Increase backlight
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
     # Decrease backlight
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "f", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key(
-        [mod],
-        "f",
-        lazy.window.toggle_fullscreen(),
-        desc="Toggle fullscreen on the focused window",
-    ),
+    # Key(
+    #     [mod],
+    #     "f",
+    #     lazy.window.toggle_fullscreen(),
+    #     desc="Toggle fullscreen on the focused window",
+    # ),
     Key(
         [mod],
         "t",
@@ -116,9 +114,9 @@ keys = [
         desc="Toggle floating on the focused window",
     ),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod, "shift"], "space", lazy.window.toggle_floating()),
+    Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod], "r", lazy.spawn("rofi -show run -show-icons"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "v", lazy.window.toggle_floating()),
 ]
 
 
@@ -188,15 +186,16 @@ colors = {
     # "dark_grey": "#292e42",
 
     # Kanagawa
-    # "bg": "#1f1f28",       #  Sumire Black (Background)
-    # "fg": "#dcd7ba",       #  Fuji White (Foreground)
-    # "red": "#e46876",      #  Sakura Pink (Red)
-    # "green": "#98bb6c",    #  Spring Green (Green)
-    # "yellow": "#ffa066",   #  Autumn Yellow (Yellow)
-    # "blue": "#7e9cd8",     #  Wave Blue (Blue)
-    # "purple": "#957fb8",   #  Oni Purple (Purple)
-    # "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
-    # "orange": "#e98a35"    #  Koi Carp Orange (Orange)
+    "bg": "#1f1f28",       #  Sumire Black (Background)
+    "fg": "#dcd7ba",       #  Fuji White (Foreground)
+    "red": "#e46876",      #  Sakura Pink (Red)
+    "green": "#98bb6c",    #  Spring Green (Green)
+    "yellow": "#ffa066",   #  Autumn Yellow (Yellow)
+    "blue": "#7e9cd8",     #  Wave Blue (Blue)
+    "purple": "#957fb8",   #  Oni Purple (Purple)
+    "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
+    "orange": "#e98a35",    #  Koi Carp Orange (Orange)
+    "dark_grey": "#363646"
 
     # Catppuccin
     # "bg": "#1e1e2e",
@@ -221,16 +220,16 @@ colors = {
     # "orange": "#c49060",
 
     # OneDark
-    "bg": "#282c34",
-    "fg": "#abb2bf",
-    "red": "#e86671",
-    "green": "#98c379",
-    "yellow": "#e5c07b",
-    "blue": "#61afef",
-    "purple": "#c678dd",
-    "cyan": "#56b6c2",
-    "orange": "#d19a66",
-    "dark_grey": "#3b3f4c",
+    # "bg": "#282c34",
+    # "fg": "#abb2bf",
+    # "red": "#e86671",
+    # "green": "#98c379",
+    # "yellow": "#e5c07b",
+    # "blue": "#61afef",
+    # "purple": "#c678dd",
+    # "cyan": "#56b6c2",
+    # "orange": "#d19a66",
+    # "dark_grey": "#3b3f4c",
 }
 
 layout_theme = {
@@ -259,223 +258,9 @@ layouts = [
     # layout.Spiral(**layout_theme),
 ]
 
-widget_defaults = dict(
-    font="Ubunto bold",
-    fontsize=12,
-    padding=0,
-)
-
-extension_defaults = widget_defaults.copy()
-# separator = widget.TextBox(text=" ", padding=5)
-grey_arrow = widget.TextBox(
-    text="⏴",
-    foreground=colors["dark_grey"],
-    background=colors["bg"],
-    padding=-10,
-    fontsize=60,
-)
-
-bg_arrow = widget.TextBox(
-    text="⏴",
-    foreground=colors["bg"],
-    background=colors["dark_grey"],
-    fontsize=60,
-    padding=-10,
-)
 screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.GroupBox(
-                    fontsize=14,
-                    margin_y=3,
-                    margin_x=3,
-                    padding_y=5,
-                    padding_x=5,
-                    borderwidth=3,
-                    active=colors["red"],
-                    inactive=colors["fg"],
-                    highlight_method="line",
-                    highlight_color=[colors["bg"], colors["bg"]],
-                    this_current_screen_border=colors["fg"],
-                    this_screen_border=colors["red"],
-                    other_current_screen_border=colors["green"],
-                    other_screen_border=colors["blue"],
-                    urgent_border=colors["red"],
-                    background=colors["bg"],
-                    fontweight="bold",
-                ),
-                widget.Prompt(),
-                widget.Spacer(),
-                grey_arrow,
-                widget.Volume(
-                    fmt=" 🔊: {} ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                ),
-                bg_arrow,
-                widget.Backlight(
-                    backlight_name="nvidia_wmi_ec_backlight",  # Replace with your actual device name
-                    brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
-                    max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
-                    change_command="brightnessctl s {0}%",  # Command to change brightness
-                    format=" 🔆 {percent:2.0%} ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                    ),
-                grey_arrow,
-                widget.Battery(
-                    format="🔋 {char}{percent:2.0%} {hour:d}:{min:02d} ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                    ),
-                bg_arrow,
-                widget.CPU(
-                    format=" CPU: {load_percent}% ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                grey_arrow,
-                widget.Memory(
-                    format=" RAM: {MemUsed:.1f} GB/{MemTotal:.1f} GB ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                    measure_mem="G",
-                ),
-                bg_arrow,
-                widget.Net(
-                    format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix} ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                widget.Systray(
-                    background=colors["bg"],
-                    icon_size=20,
-                    padding=10,
-                ),
-                grey_arrow,
-                widget.Clock(
-                    format="🕐 %H : %M ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                ),
-                bg_arrow,
-                widget.Clock(
-                    format="📅  %a %d/%m/%y",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                widget.Sep(
-                    linewidth=0,
-                    padding=6,
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-            ],
-            24,
-            background=colors["bg"],
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
-    ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.GroupBox(
-                    fontsize=14,
-                    margin_y=3,
-                    margin_x=3,
-                    padding_y=5,
-                    padding_x=5,
-                    borderwidth=3,
-                    active=colors["red"],
-                    inactive=colors["fg"],
-                    highlight_method="line",
-                    highlight_color=[colors["bg"], colors["bg"]],
-                    this_current_screen_border=colors["fg"],
-                    this_screen_border=colors["red"],
-                    other_current_screen_border=colors["green"],
-                    other_screen_border=colors["blue"],
-                    urgent_border=colors["red"],
-                    background=colors["bg"],
-                    fontweight="bold",
-                ),
-                widget.Prompt(),
-                widget.Spacer(),
-                grey_arrow,
-                widget.Volume(
-                    fmt=" 🔊: {} ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                ),
-                bg_arrow,
-                widget.Backlight(
-                    backlight_name="nvidia_wmi_ec_backlight",  # Replace with your actual device name
-                    brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/brightness",
-                    max_brightness_file="/sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness",
-                    change_command="brightnessctl s {0}%",  # Command to change brightness
-                    format=" 🔆 {percent:2.0%} ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                    ),
-                grey_arrow,
-                widget.Battery(
-                    format="🔋 {char}{percent:2.0%} {hour:d}:{min:02d} ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                    ),
-                bg_arrow,
-                widget.CPU(
-                    format=" CPU: {load_percent}% ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                grey_arrow,
-                widget.Memory(
-                    format=" RAM: {MemUsed:.1f} GB/{MemTotal:.1f} GB ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                    measure_mem="G",
-                ),
-                bg_arrow,
-                widget.Net(
-                    format="{down:.0f}{down_suffix} ↓↑ {up:.0f}{up_suffix} ",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                grey_arrow,
-                widget.Clock(
-                    format="🕐 %H : %M ",
-                    foreground=colors["fg"],
-                    background=colors["dark_grey"],
-                ),
-                bg_arrow,
-                widget.Clock(
-                    format="📅  %a %d/%m/%y",
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-                widget.Sep(
-                    linewidth=0,
-                    padding=6,
-                    foreground=colors["fg"],
-                    background=colors["bg"],
-                ),
-            ],
-            24,
-            background=colors["bg"],
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
-    ),
+    Screen(top=bar.Gap(30)),
+    Screen(top=bar.Gap(30)),
 ]
 
 # Drag floating layouts.
@@ -528,7 +313,6 @@ wl_xcursor_size = 24
 def autostart():
     autostartscript = "~/.config/qtile/autostart.sh"
     home = os.path.expanduser(autostartscript)
-    os.system("xrdb -merge ~/.Xresources")
     subprocess.Popen([home])
 
 
