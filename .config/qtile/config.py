@@ -233,8 +233,8 @@ colors = {
 }
 
 layout_theme = {
-    "border_width": 1,
-    "margin": 0,
+    "border_width": 3,
+    "margin": 5,
     "border_focus": colors["fg"],
     "border_normal": colors["bg"],
 }
@@ -259,8 +259,7 @@ layouts = [
 ]
 
 screens = [
-    Screen(top=bar.Gap(30)),
-    Screen(top=bar.Gap(30)),
+    Screen(top=bar.Gap(32)),
 ]
 
 # Drag floating layouts.
