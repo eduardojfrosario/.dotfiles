@@ -174,28 +174,28 @@ colors = {
     # "dark_grey": "#1d2021",
 
     # Tokyo Night
-    # "bg": "#1a1b26",  # Background
-    # "fg": "#a9b1d6",  # Foreground (Text)
-    # "red": "#f7768e",  # Red (Error)
-    # "green": "#9ece6a",  # Green (Success)
-    # "yellow": "#e0af68",  # Yellow (Warning)
-    # "blue": "#7aa2f7",  # Blue (Info)
-    # "purple": "#ad8ee6",  # Purple (Accent)
-    # "cyan": "#449dab",  # Cyan (Secondary Info)
-    # "orange": "#ff9e64",  # Orange (Accent)
-    # "dark_grey": "#292e42",
+    "bg": "#1a1b26",  # Background
+    "fg": "#a9b1d6",  # Foreground (Text)
+    "red": "#f7768e",  # Red (Error)
+    "green": "#9ece6a",  # Green (Success)
+    "yellow": "#e0af68",  # Yellow (Warning)
+    "blue": "#7aa2f7",  # Blue (Info)
+    "purple": "#ad8ee6",  # Purple (Accent)
+    "cyan": "#449dab",  # Cyan (Secondary Info)
+    "orange": "#ff9e64",  # Orange (Accent)
+    "dark_grey": "#292e42",
 
     # Kanagawa
-    "bg": "#1f1f28",       #  Sumire Black (Background)
-    "fg": "#dcd7ba",       #  Fuji White (Foreground)
-    "red": "#e46876",      #  Sakura Pink (Red)
-    "green": "#98bb6c",    #  Spring Green (Green)
-    "yellow": "#ffa066",   #  Autumn Yellow (Yellow)
-    "blue": "#7e9cd8",     #  Wave Blue (Blue)
-    "purple": "#957fb8",   #  Oni Purple (Purple)
-    "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
-    "orange": "#e98a35",    #  Koi Carp Orange (Orange)
-    "dark_grey": "#363646"
+    # "bg": "#1f1f28",       #  Sumire Black (Background)
+    # "fg": "#dcd7ba",       #  Fuji White (Foreground)
+    # "red": "#e46876",      #  Sakura Pink (Red)
+    # "green": "#98bb6c",    #  Spring Green (Green)
+    # "yellow": "#ffa066",   #  Autumn Yellow (Yellow)
+    # "blue": "#7e9cd8",     #  Wave Blue (Blue)
+    # "purple": "#957fb8",   #  Oni Purple (Purple)
+    # "cyan": "#7fb4ca",     #  Surimi Blue (Cyan)
+    # "orange": "#e98a35",    #  Koi Carp Orange (Orange)
+    # "dark_grey": "#363646"
 
     # Catppuccin
     # "bg": "#1e1e2e",
