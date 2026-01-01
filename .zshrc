@@ -111,16 +111,16 @@ alias l='ls -lav --ignore=".*"'   # show long listing but no hidden dotfiles exc
 
 # shortcuts
 alias zshrc="nvim ~/.zshrc"
-alias c="clear -x"
+alias c="clear"
 alias nf="fastfetch"
 alias zzz="systemctl suspend"
 alias kys="shutdown now"
 alias m='nvim .'
 alias f="fzf"
-alias githelp="bat ~/.githelp.md"
+# for hyprland
 alias wp="~/.config/hypr/wp.sh"
+# for qtile
 # alias wp="python ~/.config/qtile/random_wallpaper.py"
-alias cd='z'
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
 # partitions
