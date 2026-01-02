@@ -144,14 +144,14 @@ export PATH="/home/losg/.local/bin:$PATH"
 # Function to find and cd to a directory using fzf
 fzf_cd() {
   local dir
-  dir=$(find ~ -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
+  dir=$(fd --type d . ~ | fzf) && cd "$dir" || echo "No directory selected"
 }
 zle -N fzf_cd
 
 
 fzf_/() {
   local dir
-  dir=$(find / -type d 2>/dev/null | fzf) && cd "$dir" || echo "No directory selected"
+  dir=$(fd --type d . / | fzf) && cd "$dir" || echo "No directory selected"
 }
 zle -N fzf_/
 
