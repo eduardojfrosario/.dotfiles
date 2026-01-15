@@ -73,6 +73,7 @@ ENABLE_CORRECTION="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/fzf/key-bindings.zsh
 
 # User configuration
 
@@ -125,8 +126,6 @@ alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 
 # partitions
 alias disk="ncdu"
-alias NV="sudo mkdir -p /run/media/losg/New\ Volume"
-alias MNV="sudo mount /dev/nvme0n1p4 '/run/media/losg/New Volume'"
 alias LD="sudo mkdir -p /run/media/losg/8AFA9A88FA9A6FE5"
 alias MLD="sudo mount /dev/nvme0n1p3 '/run/media/losg/8AFA9A88FA9A6FE5'"
 
