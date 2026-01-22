@@ -160,6 +160,7 @@ bindkey '^_' fzf_/
 bindkey '^Y' autosuggest-accept
 
 when
+cal
 
 eval "$(zoxide init zsh)"
 

@@ -1,12 +1,11 @@
-[global]
 default-timeout=3000
 
 #anchor=top-right
 #margin=10
 
-background=#191724  # Dark background
-border-color=#3e3a59 # Slightly lighter border
-text-color=#e0def4   # Soft off-white text
+background-color=#192330
+border-color=#719cd6
+text-color=#cdcecf
 
 [app-name="blueman"]
 invisible=1

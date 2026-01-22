@@ -40,5 +40,6 @@ clipboard-paste-protection = true
 
 window-decoration = none
 
-theme = Nightfox
+theme = Gruvbox Dark
 
+background-opacity = 0.9
