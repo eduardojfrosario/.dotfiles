@@ -109,7 +109,7 @@ keys = [
     # ),
     Key(
         [mod],
-        "t",
+        "p",
         lazy.window.toggle_floating(),
         desc="Toggle floating on the focused window",
     ),
