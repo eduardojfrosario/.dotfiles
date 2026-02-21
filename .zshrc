@@ -38,6 +38,10 @@ alias disk="ncdu"
 alias LD="sudo mkdir -p /run/media/losg/8AFA9A88FA9A6FE5"
 alias MLD="sudo mount /dev/nvme0n1p3 '/run/media/losg/8AFA9A88FA9A6FE5'"
 
+# git
+alias gs="git status"
+alias ga="git add ."
+
 # random
 alias wisdom='fortune | cowsay -f actually'
 alias figlet="figlet -f slant"
@@ -48,6 +52,9 @@ export LC_ALL="en_US.UTF-8"
 export BROWSER="/usr/bin/zen-browser"
 
 export PATH="/home/losg/.local/bin:$PATH"
+
+# call future
+future
 
 # Function to find and cd to a directory using fzf
 fzf_cd() {
@@ -64,11 +71,17 @@ fzf_/() {
 zle -N fzf_/
 
 
-bindkey '^F' fzf_cd
-bindkey '^_' fzf_/
-bindkey '^Y' autosuggest-accept
+bindkey '^f' fzf_cd
+bindkey '^[/' fzf_/
+bindkey '^y' autosuggest-accept
 
-future
+# custom binds
+bindkey -s "^Xgc" 'git commit -m ""\C-b'
+
+# Open buffer line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 eval "$(zoxide init zsh)"
 
@@ -86,3 +99,17 @@ zle -N znt-history-widget
 setopt AUTO_PUSHD HIST_IGNORE_DUPS PUSHD_IGNORE_DUPS
 zstyle ':completion::complete:n-kill::bits' matcher 'r:|=** l:|=*'
 ### END ###
+
+# better mv
+autoload zmv
+
+# hook that occurs whenever cd into dir
+chpwd() {
+    if [[ -d .venv ]]; then
+        source .venv/bin/activate
+    elif [[ -d venv ]]; then
+        source venv/bin/activate
+    elif [[ -n "$VIRTUAL_ENV" ]]; then
+        deactivate
+    fi
+}
