@@ -40,7 +40,6 @@ alias MLD="sudo mount /dev/nvme0n1p3 '/run/media/losg/8AFA9A88FA9A6FE5'"
 
 # git
 alias gs="git status"
-alias ga="git add ."
 
 # random
 alias wisdom='fortune | cowsay -f actually'

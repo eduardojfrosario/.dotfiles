@@ -3,9 +3,9 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", "Font Awesome 7 Free";
-    font-size: 12px;
+    font-size: 11px;
     min-height: 0;
-    margin: 3px;
+    margin: 2px;
 }
 
 /* Main bar */
@@ -26,10 +26,10 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    padding: 0 8px;
+    padding: 0 6px;
     background-color: transparent; /* REMOVED BACKGROUND */
     color: #ebdbb2; /* fg */
-    border-bottom: 3px solid transparent; /* Prevent layout shift */
+    border-bottom: 2px solid transparent; /* Prevent layout shift */
     border-radius: 0; /* Squared off for underline style */
     margin: 0 2px;
     transition: all 0.3s ease;
@@ -38,13 +38,13 @@ window#waybar.hidden {
 #workspaces button:hover {
     background-color: #3c3836; /* bg1 */
     border-radius: 10px; /* Round corners on hover only */
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button.active {
     background-color: transparent;
     color: #83a598; /* blue */
-    border-bottom: 3px solid #83a598; /* UNDERLINE STYLE */
+    border-bottom: 2px solid #83a598; /* UNDERLINE STYLE */
     font-weight: bold;
     border-radius: 0;
 }
@@ -59,7 +59,7 @@ window#waybar.hidden {
 #custom-separator {
     color: #928374; /* gray */
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0;
     background-color: transparent;
 }
@@ -70,9 +70,9 @@ window#waybar.hidden {
 
 /* Modules */
 #clock, #cpu, #memory, #backlight, #battery, #pulseaudio, #power-profiles-daemon, #tray {
-    padding: 0 12px;
-    margin: 0 4px;
-    border-radius: 10px;
+    padding: 0 8px;
+    margin: 0 3px;
+    border-radius: 8px;
     color: #ebdbb2; /* fg */
     transition: all 0.3s ease;
 }
@@ -155,4 +155,3 @@ tooltip {
 tooltip label {
     color: #ebdbb2; /* fg */
 }
-
